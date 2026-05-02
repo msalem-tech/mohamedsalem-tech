@@ -3,41 +3,44 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>msalem tech</title>
 
 <style>
 body{
 margin:0;
 font-family:Arial;
-background:#0f172a;
+background:linear-gradient(135deg,#0f172a,#111827);
 color:white;
 direction:rtl;
+scroll-behavior:smooth;
 }
 
+/* الهيدر */
 header{
-background:#111827;
-padding:25px;
 text-align:center;
+padding:40px 20px;
+background:#111827;
 }
 
 header h1{
 margin:0;
-font-size:32px;
+font-size:34px;
 }
 
 header p{
 color:#cbd5e1;
-margin-top:8px;
+margin-top:10px;
 }
 
-/* أزرار التنقل */
+/* أزرار */
 nav{
-margin-top:15px;
+margin-top:20px;
 }
 
 nav a{
 display:inline-block;
-margin:5px;
+margin:6px;
 padding:10px 15px;
 background:#1f2937;
 color:white;
@@ -49,40 +52,37 @@ transition:0.3s;
 nav a:hover{
 background:#38bdf8;
 color:black;
+transform:scale(1.05);
 }
 
-/* المحتوى */
+/* الأقسام */
 .container{
-max-width:1100px;
+max-width:1000px;
 margin:auto;
 padding:20px;
 }
 
-.section-title{
-color:#38bdf8;
-margin-top:30px;
-}
-
-.card{
+section{
 background:#1f2937;
-padding:20px;
-margin:15px 0;
-border-radius:12px;
+padding:25px;
+margin:20px 0;
+border-radius:15px;
+box-shadow:0 0 10px rgba(0,0,0,0.3);
 }
 
-/* أزرار كبيرة */
-.big-btn{
-display:inline-block;
-padding:12px 18px;
-margin:10px;
-background:#38bdf8;
+/* روابط سوشيال */
+.social a{
+display:block;
+margin:10px 0;
+padding:12px;
+background:#0ea5e9;
 color:black;
-border-radius:10px;
 text-decoration:none;
+border-radius:10px;
 font-weight:bold;
 }
 
-.big-btn:hover{
+.social a:hover{
 background:white;
 }
 
@@ -105,54 +105,53 @@ color:#94a3b8;
 <p>شروحات تقنية - أدوات - ذكاء اصطناعي 🚀</p>
 
 <nav>
-<a href="#">الرئيسية</a>
-<a href="#">الشروحات</a>
-<a href="#">الأدوات</a>
-<a href="#">يوتيوب</a>
-<a href="#">مقالات</a>
-<a href="#">عنّي</a>
-<a href="#">تواصل</a>
+<a href="#home">الرئيسية</a>
+<a href="#content">الشروحات</a>
+<a href="#social">التواصل</a>
+<a href="#about">عنّي</a>
 </nav>
 </header>
 
 <div class="container">
 
-<h2 class="section-title">🔥 أهلاً بيك</h2>
+<section id="home">
+<h2>🔥 أهلاً بيك</h2>
+<p>ده موقع msalem tech لعرض المحتوى التقني والشروحات والأدوات بشكل احترافي وسهل.</p>
+</section>
 
-<div class="card">
+<section id="content">
+<h2>📚 الشروحات</h2>
+<p>هنا هتلاقي شروحات في البرمجة، الذكاء الاصطناعي، وأدوات مفيدة بشكل بسيط.</p>
+</section>
+
+<section id="social">
+
+<h2>🌐 تواصل معي</h2>
+
+<div class="social">
+
+<a href="https://www.youtube.com/@mohamedsalem-tech?si=7janvpAxCOY9HsqA" target="_blank">
+🔴 يوتيوب - Mohamed Salem Tech
+</a>
+
+<a href="https://www.tiktok.com/@mohamed.salem.tec" target="_blank">
+🎵 تيك توك - @mohamed.salem.tec
+</a>
+
+<a href="mailto:believersdailyfort@gmail.com">
+📩 إرسال إيميل
+</a>
+
+</div>
+
+</section>
+
+<section id="about">
+<h2>👤 عنّي</h2>
 <p>
-موقع محمد سالم | تك هو منصة لتقديم شروحات تقنية، أدوات مجانية، ومحتوى عن الذكاء الاصطناعي بشكل بسيط وسهل.
+محمد سالم | صانع محتوى تقني مهتم بتبسيط التكنولوجيا والذكاء الاصطناعي وتقديم محتوى مفيد للجميع 💡
 </p>
-</div>
-
-<h2 class="section-title">🚀 روابط سريعة</h2>
-
-<a class="big-btn" href="#">📺 يوتيوب</a>
-<a class="big-btn" href="#">📚 الشروحات</a>
-<a class="big-btn" href="#">🧠 أدوات</a>
-<a class="big-btn" href="#">👤 عني</a>
-<a class="big-btn" href="#">📩 تواصل</a>
-
-<h2 class="section-title">🧠 أحدث المحتوى</h2>
-
-<div class="card">
-<p>📌 شرح أدوات الذكاء الاصطناعي</p>
-</div>
-
-<div class="card">
-<p>📌 مواقع مجانية مفيدة للطلاب</p>
-</div>
-
-<div class="card">
-<p>📌 شروحات تقنية للمبتدئين</p>
-</div>
-
-<h2 class="section-title">🔴 يوتيوب</h2>
-
-<div class="card">
-<p>اشترك في القناة لمتابعة أحدث الشروحات 💻</p>
-<a class="big-btn" href="#">اشترك الآن</a>
-</div>
+</section>
 
 </div>
 
