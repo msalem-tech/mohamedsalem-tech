@@ -8,7 +8,7 @@
 
 <!-- 🔥 معاينة السوشيال -->
 <meta property="og:title" content="محمد سالم | تك - Mohamed Salem | Tech">
-<meta property="og:description" content="شروحات تقنية - أدوات - ذكاء اصطناعي - موقع تحت التطوير">
+<meta property="og:description" content="موقع تحت التطوير - شروحات تقنية وأدوات وذكاء اصطناعي">
 <meta property="og:image" content="https://raw.githubusercontent.com/msalem-tech/mohamedsalem-tech/main/logo%20MS.png">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://msalem-tech.github.io/mohamedsalem-tech/">
@@ -22,26 +22,25 @@ color:white;
 direction:rtl;
 }
 
-/* تنبيه علوي */
+/* 🚨 التنبيه */
 .warning{
 background:linear-gradient(90deg,#7f1d1d,#ef4444,#7f1d1d);
 color:white;
-padding:12px;
+padding:14px;
 font-weight:bold;
 text-align:center;
-overflow:hidden;
 border-bottom:2px solid black;
+
+/* اهتزاز بسيط */
+animation: shake 2.5s infinite;
 }
 
-.warning span{
-display:inline-block;
-white-space:nowrap;
-animation:move 12s linear infinite;
-}
-
-@keyframes move{
-0%{transform:translateX(100%);}
-100%{transform:translateX(-100%);}
+@keyframes shake{
+0%{transform:translateX(0);}
+25%{transform:translateX(-2px);}
+50%{transform:translateX(2px);}
+75%{transform:translateX(-2px);}
+100%{transform:translateX(0);}
 }
 
 /* الهيدر */
@@ -61,11 +60,7 @@ color:#cbd5e1;
 margin-top:8px;
 }
 
-/* زرار التنقل */
-nav{
-margin-top:15px;
-}
-
+/* التنقل */
 nav a{
 display:inline-block;
 margin:5px;
@@ -113,7 +108,7 @@ font-weight:bold;
 background:white;
 }
 
-/* فوتر */
+/* الفوتر */
 footer{
 text-align:center;
 padding:20px;
@@ -127,11 +122,9 @@ color:#94a3b8;
 
 <body>
 
-<!-- 🚨 التنبيه -->
+<!-- 🚨 تنبيه ثابت -->
 <div class="warning">
-<span>
-🚨 تنبيه مهم 🚨 الموقع لسه في بداية التطوير ومش مكتمل، ولسه بيتم إضافة محتوى وأقسام جديدة 🔧💻 — استنى التحديثات الجاية اللي هتكون أقوى 🔥 — محمد سالم | تك - Mohamed Salem | Tech
-</span>
+🚨 تنبيه مهم 🚨 الموقع لسه في بداية التطوير ومش مكتمل حاليًا 🔧💻 — فيه شغل بيتعمل عليه باستمرار، فممكن تلاقي حاجات ناقصة — استنى التحديثات الجاية اللي هتكون أقوى 🔥 — محمد سالم | تك - Mohamed Salem | Tech
 </div>
 
 <header>
@@ -150,12 +143,12 @@ color:#94a3b8;
 
 <section id="home">
 <h2>🔥 أهلاً بيك</h2>
-<p>موقع محمد سالم | تك لعرض محتوى تقني وأدوات وذكاء اصطناعي بشكل مبسط.</p>
+<p>ده موقع محمد سالم | تك لعرض المحتوى التقني والأدوات والذكاء الاصطناعي بشكل مبسط.</p>
 </section>
 
 <section id="content">
 <h2>📚 الشروحات</h2>
-<p>شروحات تقنية وأفكار وأدوات هتفيدك في التعلم والتطوير.</p>
+<p>هنا هتلاقي شروحات تقنية وأفكار وأدوات مفيدة للتعلم والتطوير.</p>
 </section>
 
 <section id="social">
