@@ -21,14 +21,13 @@ color:white;
 direction:rtl;
 }
 
-/* 🚨 رسالة النظام */
+/* 🚨 التنبيه */
 .alert{
 background:#111827;
 border:2px solid #ef4444;
 margin:15px;
 padding:15px;
 border-radius:12px;
-box-shadow:0 0 10px rgba(0,0,0,0.4);
 animation:shake 2.8s infinite;
 }
 
@@ -43,7 +42,6 @@ color:#e5e7eb;
 line-height:1.7;
 }
 
-/* اهتزاز خفيف */
 @keyframes shake{
 0%{transform:translateX(0);}
 25%{transform:translateX(-1px);}
@@ -69,7 +67,7 @@ color:#cbd5e1;
 margin-top:8px;
 }
 
-/* روابط */
+/* أزرار */
 nav a{
 display:inline-block;
 margin:5px;
@@ -78,6 +76,7 @@ background:#1f2937;
 color:white;
 text-decoration:none;
 border-radius:10px;
+transition:0.3s;
 }
 
 nav a:hover{
@@ -85,6 +84,7 @@ background:#38bdf8;
 color:black;
 }
 
+/* أقسام */
 section{
 background:#1f2937;
 padding:20px;
@@ -92,6 +92,23 @@ margin:15px;
 border-radius:12px;
 }
 
+/* روابط سوشيال */
+.social a{
+display:block;
+margin:10px 0;
+padding:12px;
+background:#0ea5e9;
+color:black;
+text-decoration:none;
+border-radius:10px;
+font-weight:bold;
+}
+
+.social a:hover{
+background:white;
+}
+
+/* الفوتر */
 footer{
 text-align:center;
 padding:20px;
@@ -104,12 +121,12 @@ margin-top:20px;
 
 <body>
 
-<!-- 🚨 رسالة النظام -->
+<!-- 🚨 تنبيه -->
 <div class="alert">
 <h3>🚨 تنبيه مهم</h3>
 <p>
 الموقع لسه في بداية التطوير ومش مكتمل حاليًا 🔧💻  
-فيه شغل بيتعمل عليه باستمرار، فممكن تلاقي أقسام ناقصة أو محتوى مش متضاف بعد.  
+فيه شغل بيتعمل عليه باستمرار، فممكن تلاقي أقسام ناقصة أو محتوى لسه ما اتضافش.  
 التحديثات الجاية هتكون أقوى بكتير 🔥  
 <br><br>
 <strong>محمد سالم | تك - Mohamed Salem | Tech</strong>
@@ -130,28 +147,37 @@ margin-top:20px;
 
 <section id="home">
 <h2>🔥 أهلاً بيك</h2>
-<p>موقع تقني بسيط لعرض الشروحات والأدوات بشكل واضح وسهل.</p>
+<p>موقع محمد سالم | تك لعرض المحتوى التقني بشكل بسيط وسهل.</p>
 </section>
 
 <section id="content">
 <h2>📚 الشروحات</h2>
-<p>هنا هتلاقي شروحات تقنية وأدوات مفيدة للتعلم.</p>
+<p>هنا هتلاقي شروحات وأدوات ومواضيع تقنية مفيدة.</p>
 </section>
 
 <section id="social">
-<h2>🌐 التواصل</h2>
-<p>
-🔴 يوتيوب  
-<br>
-🎵 تيك توك  
-<br>
-📩 إيميل
-</p>
+<h2>🌐 تواصل معي</h2>
+
+<div class="social">
+
+<a href="https://www.youtube.com/@mohamedsalem-tech?si=7janvpAxCOY9HsqA" target="_blank">
+🔴 يوتيوب - Mohamed Salem Tech
+</a>
+
+<a href="https://www.tiktok.com/@mohamed.salem.tec" target="_blank">
+ تيك توك - @mohamed.salem.tec
+</a>
+
+<a href="mailto:believersdailyfort@gmail.com">
+📩 الإيميل: believersdailyfort@gmail.com
+</a>
+
+</div>
 </section>
 
 <section id="about">
 <h2>👤 عنّي</h2>
-<p>محمد سالم | صانع محتوى تقني 💡</p>
+<p>محمد سالم | صانع محتوى تقني مهتم بتبسيط التكنولوجيا والذكاء الاصطناعي 💡</p>
 </section>
 
 <footer>
