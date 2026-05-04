@@ -1,109 +1,47 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <title>Mohamed Salem Tech</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>محمد سالم | تك</title>
+
+<!-- 🔥 صورة المعاينة -->
+<meta property="og:title" content="محمد سالم | تك">
+<meta property="og:description" content="شروحات تقنية وفيديوهات">
+<meta property="og:image" content="https://raw.githubusercontent.com/msalem-tech/mohamedsalem-tech/main/logo%20MS.png">
+<meta property="og:type" content="website">
+
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-  <h1>Mohamed Salem Tech 💻</h1>
-  <p>شروحات تقنية - أدوات مفيدة - ذكاء اصطناعي 🚀</p>
-
-  <nav>
-    <button onclick="openTab('home')">الرئيسية</button>
-    <button onclick="openTab('videos')">الفيديوهات</button>
-    <button onclick="openTab('tools')">الأدوات</button>
-    <button onclick="openTab('contact')">تواصل</button>
-    <button onclick="openTab('about')">عنّي</button>
-  </nav>
+<h1>محمد سالم | تك 💻</h1>
+<p>شروحات تقنية وفيديوهات 🔥</p>
 </header>
 
-<!-- HOME -->
-<section id="home" class="tab active">
+<!-- 🔗 روابط -->
+<div class="links">
+<a href="https://www.youtube.com/@mohamedsalem-tech" target="_blank">🔴 يوتيوب</a>
+<a href="https://www.tiktok.com/@mohamed.salem.tec" target="_blank">🎵 تيك توك</a>
+<a href="mailto:believersdailyfort@gmail.com">📩 إيميل</a>
+</div>
 
-  <div class="warning">
-    🚧 لسه بنشتغل على الموقع  
-    😅 شغالين عليه دلوقتي  
-    🔥 قريب هيكون جاهز بالكامل
-  </div>
+<!-- 📺 فيديوهات -->
+<div class="video-box">
 
-  <h2>🔥 آخر إضافة</h2>
+<h2>📺 فيديوهاتي</h2>
 
-  <div class="card">
-    <h3>فيديو جديد</h3>
-    <p>شرح أدوات ذكاء اصطناعي مفيدة</p>
-    <button onclick="comingSoon()">🎥 مشاهدة الفيديو</button>
-  </div>
+<div id="videos">
+<a href="#">🎬 فيديو 1</a>
+<a href="#">🎬 فيديو 2</a>
+</div>
 
-</section>
+<button onclick="addVideo()">➕ أضف فيديو</button>
 
-<!-- VIDEOS -->
-<section id="videos" class="tab">
-
-  <h2>🎥 الفيديوهات</h2>
-
-  <div class="card">
-    <h3>إزاي تعمل موقع مجاني</h3>
-    <p>شرح إنشاء موقع باستخدام GitHub Pages</p>
-    <button onclick="comingSoon()">🎥 مشاهدة</button>
-  </div>
-
-  <div class="card">
-    <h3>أدوات AI مهمة</h3>
-    <p>أفضل أدوات الذكاء الاصطناعي</p>
-    <button onclick="comingSoon()">🎥 مشاهدة</button>
-  </div>
-
-</section>
-
-<!-- TOOLS -->
-<section id="tools" class="tab">
-
-  <h2>🧠 الأدوات</h2>
-
-  <div class="card">
-    <h3>أداة 1</h3>
-    <p>ذكاء اصطناعي يساعدك في الشرح</p>
-    <button onclick="comingSoon()">🌐 فتح</button>
-  </div>
-
-  <div class="card">
-    <h3>أداة 2</h3>
-    <p>تصميم صور بسهولة</p>
-    <button onclick="comingSoon()">🌐 فتح</button>
-  </div>
-
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="tab">
-
-  <h2>📡 تواصل</h2>
-
-  <p>يوتيوب:</p>
-  <a href="https://youtube.com/@mohamedsalem-tech?si=7janvpAxCOY9HsqA">القناة</a>
-
-  <p>تيك توك:</p>
-  <a href="https://www.tiktok.com/@mohamed.salem.tec">الحساب</a>
-
-  <p>الإيميل:</p>
-  <p>believersdailyfort@gmail.com</p>
-
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="tab">
-
-  <h2>👤 عنّي</h2>
-  <p>
-    أنا محمد سالم 💻  
-    بحب التكنولوجيا وشرح الأدوات بطريقة بسيطة وسهلة  
-  </p>
-
-</section>
+</div>
 
 <script src="script.js"></script>
 </body>
