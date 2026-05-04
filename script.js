@@ -1,16 +1,18 @@
-function openTab(tabId) {
+// رسالة عند فتح الموقع
+alert("🚨 الموقع لسه تحت التطوير، استنى التحديثات 🔥");
 
-  let tabs = document.querySelectorAll(".tab");
+// إضافة فيديو
+function addVideo() {
+    let link = prompt("حط لينك الفيديو:");
 
-  tabs.forEach(tab => {
-    tab.classList.remove("active");
-  });
+    if(link){
+        let container = document.getElementById("videos");
 
-  document.getElementById(tabId).classList.add("active");
+        let a = document.createElement("a");
+        a.href = link;
+        a.target = "_blank";
+        a.innerText = "🎬 فيديو جديد";
 
-}
-
-// زرار مش شغال
-function comingSoon() {
-  alert("🚧 قريب هيكون جاهز 😅🔥");
+        container.appendChild(a);
+    }
 }
