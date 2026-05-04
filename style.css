@@ -9,11 +9,13 @@ body {
     background: linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%);
     min-height: 100vh;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     position: relative;
     overflow-x: hidden;
 }
 
+/* الخلفية */
 .bg-pattern {
     position: absolute;
     width: 250px;
@@ -24,25 +26,32 @@ body {
     opacity: 0.4;
 }
 .top-left { top: -20px; left: -40px; }
-.bottom-right { bottom: 50px; right: -40px; }
+.bottom-right { bottom: 100px; right: -40px; }
 
 .container {
     width: 100%;
     max-width: 480px;
     padding: 40px 20px;
     text-align: center;
+    flex-grow: 1; /* يدفع الفوتر للأسفل */
+}
+
+/* Logo */
+.logo-area {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
 }
 
 .logo-container {
     width: 145px;
     height: 145px;
-    margin: 0 auto 15px;
     background: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08); /* ظل نازل لتحت */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
     border: 1px solid #e2e8f0;
     overflow: hidden;
 }
@@ -66,7 +75,7 @@ body {
     font-size: 16px;
 }
 
-/* Social Bar */
+/* Social Buttons */
 .social-bar {
     display: flex;
     gap: 12px;
@@ -84,7 +93,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 8px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05); /* ظل نازل لتحت */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
     transition: 0.3s;
 }
 
@@ -98,9 +107,9 @@ body {
     background: white;
     border-radius: 28px;
     padding: 35px 22px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04); /* ظل عميق ونازل لتحت */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
     border: 1px solid #f8fafc;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
 .card-title {
@@ -148,7 +157,6 @@ body {
 
 .btn-large:hover { background-color: #1a2a4e; transform: scale(1.01); }
 
-/* صندوق الموقع تحت التطوير */
 .under-dev-box {
     background: #f1f8ff;
     border: 1px solid #c3e0ff;
@@ -159,14 +167,21 @@ body {
     font-size: 14px;
 }
 
-/* Footer */
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
+/* الحل النهائي لمشكلة الحقوق المترحلة */
+.main-footer {
     width: 100%;
     background-color: #0d1b3e;
     color: white;
-    padding: 18px;
-    font-size: 14px;
+    padding: 20px 0;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.main-footer p {
+    margin: 0;
+    text-align: center;
+    width: 100%;
+}
+
