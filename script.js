@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const featuredBtn = document.getElementById('featured-btn');
     const recentVideosBtn = document.getElementById('recent-videos-btn');
 
+    // رسالة زر الفيديوهات المميزة
     if (featuredBtn) {
         featuredBtn.addEventListener('click', (e) => {
             e.preventDefault();
@@ -9,10 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // رسالة زر الفيديوهات الأخيرة
     if (recentVideosBtn) {
         recentVideosBtn.addEventListener('click', (e) => {
             e.preventDefault();
-            alert("استنى شوية.. بنرتب الفيديوهات وهتشتغل فوراً 🎬⏳");
+            alert("استنى شوية.. بنرتب الفيديوهات وهتشتغل فوراً علطول 🎬⏳");
         });
     }
 });
