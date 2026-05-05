@@ -10,12 +10,12 @@ body {
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    overflow-x: hidden; /* لمنع الفراغ الجانبي البايخ */
+    overflow-x: hidden;
 }
 
 .container {
     width: 100%;
-    max-width: 480px; /* العرض المثالي لتصميمك */
+    max-width: 480px;
     padding: 40px 20px;
     text-align: center;
     display: flex;
@@ -36,7 +36,7 @@ body {
 .top-left { top: 0; left: 0; }
 .bottom-right { bottom: 0; right: 0; }
 
-/* اللوجو الأصلي */
+/* اللوجو */
 .logo-container {
     width: 145px;
     height: 145px;
@@ -70,7 +70,7 @@ body {
     margin-bottom: 30px;
 }
 
-/* أزرار السوشيال ميديا الصغيرة */
+/* السوشيال ميديا */
 .social-bar {
     display: flex;
     gap: 10px;
@@ -118,7 +118,7 @@ body {
     padding-bottom: 5px;
 }
 
-/* الأزرار الكبيرة زي ما كانت */
+/* الأزرار الكبيرة */
 .btn-large {
     width: 100%;
     padding: 22px;
@@ -135,6 +135,7 @@ body {
     margin-bottom: 15px;
     transition: 0.3s;
 }
+
 .btn-large:hover { transform: scale(1.02); background-color: #1a2a4e; }
 
 .under-dev-box {
@@ -145,10 +146,9 @@ body {
     color: #2c5282;
     font-weight: bold;
     font-size: 14px;
-    margin-top: 10px;
 }
 
-/* تنسيق الحقوق الجديد (مضمون ظهوره) */
+/* الحقوق بالأسفل */
 .footer-rights {
     margin-top: 20px;
     color: #0d1b3e;
