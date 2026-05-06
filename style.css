@@ -1,158 +1,33 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+/* الأكواد الأساسية المشتركة */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+body { background: linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%); min-height: 100vh; display: flex; justify-content: center; overflow-x: hidden; }
+.container { width: 100%; max-width: 480px; padding: 40px 20px; text-align: center; display: flex; flex-direction: column; align-items: center; }
 
-body {
-    background: linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%);
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    overflow-x: hidden;
-}
+/* تنسيقات الصفحة الرئيسية (القديمة) */
+.logo-container { width: 145px; height: 145px; background: white; border-radius: 50%; box-shadow: 0 10px 25px rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: center; overflow: hidden; margin-bottom: 15px; }
+.main-logo { width: 100%; height: 100%; object-fit: cover; }
+.profile-name { font-size: 30px; color: #0d1b3e; font-weight: 800; }
+.tagline { color: #718096; margin-bottom: 30px; }
+.social-bar { display: flex; gap: 10px; width: 100%; margin-bottom: 30px; }
+.btn-social { flex: 1; padding: 14px; border-radius: 12px; color: white; text-decoration: none; font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 8px; }
+.btn-yt { background-color: #ff3131; } .btn-tk { background-color: #76e4f7; color: #000; } .btn-em { background-color: #1a73e8; }
+.content-card { background: white; border-radius: 28px; padding: 35px 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.05); width: 100%; margin-bottom: 25px; }
+.btn-large { width: 100%; padding: 22px; background-color: #0d1b3e; color: white; border-radius: 18px; text-decoration: none; font-size: 24px; font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 15px; margin-bottom: 15px; }
+.under-dev-box { background: #f1f8ff; padding: 15px; border-radius: 50px; color: #2c5282; font-weight: bold; font-size: 14px; }
+.footer-rights { margin-top: 20px; font-size: 14px; color: #0d1b3e; opacity: 0.8; }
 
-.container {
-    width: 100%;
-    max-width: 480px;
-    padding: 40px 20px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* النقاط في الخلفية */
-.bg-pattern {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    background-image: radial-gradient(#d1e3f8 1.5px, transparent 1.5px);
-    background-size: 20px 20px;
-    z-index: -1;
-    opacity: 0.5;
-}
-.top-left { top: 0; left: 0; }
-.bottom-right { bottom: 0; right: 0; }
-
-/* اللوجو */
-.logo-container {
-    width: 145px;
-    height: 145px;
-    background: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    border: 1px solid #e2e8f0;
-    overflow: hidden;
-    margin-bottom: 15px;
-}
-
-.main-logo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.profile-name {
-    font-size: 30px;
-    color: #0d1b3e;
-    font-weight: 800;
-    margin-bottom: 5px;
-}
-
-.tagline {
-    color: #718096;
-    font-size: 16px;
-    margin-bottom: 30px;
-}
-
-/* السوشيال ميديا */
-.social-bar {
-    display: flex;
-    gap: 10px;
-    width: 100%;
-    margin-bottom: 30px;
-}
-
-.btn-social {
-    flex: 1;
-    padding: 14px;
-    border-radius: 12px;
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    transition: 0.3s;
-}
-
-.btn-yt { background-color: #ff3131; }
-.btn-tk { background-color: #76e4f7; color: #000; }
-.btn-em { background-color: #1a73e8; }
-.btn-social:hover { transform: translateY(-3px); }
-
-/* كارت المحتوى */
-.content-card {
-    background: white;
-    border-radius: 28px;
-    padding: 35px 20px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
-    border: 1px solid #f0f4f8;
-    width: 100%;
-    margin-bottom: 25px;
-}
-
-.card-title {
-    font-size: 22px;
-    color: #0d1b3e;
-    margin-bottom: 30px;
-    border-bottom: 3px solid #3182ce;
-    display: inline-block;
-    padding-bottom: 5px;
-}
-
-/* الأزرار الكبيرة */
-.btn-large {
-    width: 100%;
-    padding: 22px;
-    background-color: #0d1b3e;
-    color: white;
-    border-radius: 18px;
-    text-decoration: none;
-    font-size: 24px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 15px;
-    transition: 0.3s;
-}
-
-.btn-large:hover { transform: scale(1.02); background-color: #1a2a4e; }
-
-.under-dev-box {
-    background: #f1f8ff;
-    border: 1px solid #c3e0ff;
-    padding: 15px;
-    border-radius: 50px;
-    color: #2c5282;
-    font-weight: bold;
-    font-size: 14px;
-}
-
-/* الحقوق بالأسفل */
-.footer-rights {
-    margin-top: 20px;
-    color: #0d1b3e;
-    font-size: 14px;
-    font-weight: 600;
-    opacity: 0.8;
-}
+/* تنسيقات صفحة الفيديوهات الجديدة (الديزاين الجديد) */
+.header-nav { display: flex; justify-content: space-between; width: 100%; margin-bottom: 20px; align-items: center; }
+.header-logo-text { font-size: 18px; color: #0d1b3e; }
+.back-link { font-size: 20px; color: #0d1b3e; }
+.section-main-title { font-size: 28px; width: 100%; text-align: right; color: #0d1b3e; font-weight: 800; }
+.section-subtitle { font-size: 14px; width: 100%; text-align: right; color: #718096; margin-bottom: 30px; }
+.v-card { background: white; border-radius: 20px; padding: 15px; width: 100%; margin-bottom: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); text-align: right; }
+.v-thumb { width: 100%; border-radius: 15px; overflow: hidden; position: relative; margin-bottom: 15px; }
+.placeholder-img { width: 100%; padding-top: 56%; background: #e2e8f0; }
+.placeholder-img.gray { background: #cbd5e1; }
+.v-badge { position: absolute; top: 10px; right: 10px; background: #ff3131; color: white; padding: 4px 10px; border-radius: 8px; font-size: 10px; font-weight: bold; }
+.v-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(255,255,255,0.8); width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #ff3131; }
+.v-info h3 { font-size: 18px; margin-bottom: 8px; color: #0d1b3e; }
+.v-info p { font-size: 13px; color: #718096; margin-bottom: 15px; line-height: 1.5; }
+.btn-details { display: block; width: 100%; background: #3182ce; color: white; padding: 12px; border-radius: 10px; text-decoration: none; font-weight: bold; text-align: center; }
