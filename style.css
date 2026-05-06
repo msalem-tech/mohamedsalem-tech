@@ -1,33 +1,325 @@
-/* الأكواد الأساسية المشتركة */
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-body { background: linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%); min-height: 100vh; display: flex; justify-content: center; overflow-x: hidden; }
-.container { width: 100%; max-width: 480px; padding: 40px 20px; text-align: center; display: flex; flex-direction: column; align-items: center; }
+/* --- 1. الإعدادات العامة للموقع --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-/* تنسيقات الصفحة الرئيسية (القديمة) */
-.logo-container { width: 145px; height: 145px; background: white; border-radius: 50%; box-shadow: 0 10px 25px rgba(0,0,0,0.1); display: flex; align-items: center; justify-content: center; overflow: hidden; margin-bottom: 15px; }
-.main-logo { width: 100%; height: 100%; object-fit: cover; }
-.profile-name { font-size: 30px; color: #0d1b3e; font-weight: 800; }
-.tagline { color: #718096; margin-bottom: 30px; }
-.social-bar { display: flex; gap: 10px; width: 100%; margin-bottom: 30px; }
-.btn-social { flex: 1; padding: 14px; border-radius: 12px; color: white; text-decoration: none; font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 8px; }
-.btn-yt { background-color: #ff3131; } .btn-tk { background-color: #76e4f7; color: #000; } .btn-em { background-color: #1a73e8; }
-.content-card { background: white; border-radius: 28px; padding: 35px 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.05); width: 100%; margin-bottom: 25px; }
-.btn-large { width: 100%; padding: 22px; background-color: #0d1b3e; color: white; border-radius: 18px; text-decoration: none; font-size: 24px; font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 15px; margin-bottom: 15px; }
-.under-dev-box { background: #f1f8ff; padding: 15px; border-radius: 50px; color: #2c5282; font-weight: bold; font-size: 14px; }
-.footer-rights { margin-top: 20px; font-size: 14px; color: #0d1b3e; opacity: 0.8; }
+body {
+    background: linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+    background-attachment: fixed;
+}
 
-/* تنسيقات صفحة الفيديوهات الجديدة (الديزاين الجديد) */
-.header-nav { display: flex; justify-content: space-between; width: 100%; margin-bottom: 20px; align-items: center; }
-.header-logo-text { font-size: 18px; color: #0d1b3e; }
-.back-link { font-size: 20px; color: #0d1b3e; }
-.section-main-title { font-size: 28px; width: 100%; text-align: right; color: #0d1b3e; font-weight: 800; }
-.section-subtitle { font-size: 14px; width: 100%; text-align: right; color: #718096; margin-bottom: 30px; }
-.v-card { background: white; border-radius: 20px; padding: 15px; width: 100%; margin-bottom: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); text-align: right; }
-.v-thumb { width: 100%; border-radius: 15px; overflow: hidden; position: relative; margin-bottom: 15px; }
-.placeholder-img { width: 100%; padding-top: 56%; background: #e2e8f0; }
-.placeholder-img.gray { background: #cbd5e1; }
-.v-badge { position: absolute; top: 10px; right: 10px; background: #ff3131; color: white; padding: 4px 10px; border-radius: 8px; font-size: 10px; font-weight: bold; }
-.v-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(255,255,255,0.8); width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #ff3131; }
-.v-info h3 { font-size: 18px; margin-bottom: 8px; color: #0d1b3e; }
-.v-info p { font-size: 13px; color: #718096; margin-bottom: 15px; line-height: 1.5; }
-.btn-details { display: block; width: 100%; background: #3182ce; color: white; padding: 12px; border-radius: 10px; text-decoration: none; font-weight: bold; text-align: center; }
+.container {
+    width: 100%;
+    max-width: 480px; /* العرض المثالي لتصميم الموبايل */
+    padding: 40px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+/* --- 2. خلفية النقاط التجميلية --- */
+.bg-pattern {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-image: radial-gradient(#d1e3f8 1.5px, transparent 1.5px);
+    background-size: 20px 20px;
+    z-index: -1;
+    opacity: 0.5;
+}
+.top-left { top: 0; left: 0; }
+.bottom-right { bottom: 0; right: 0; }
+
+/* --- 3. تصميم الصفحة الرئيسية (Index) --- */
+.logo-container {
+    width: 145px;
+    height: 145px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border: 1px solid #e2e8f0;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.main-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-name {
+    font-size: 30px;
+    color: #0d1b3e;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.tagline {
+    color: #718096;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.social-bar {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.btn-social {
+    flex: 1;
+    padding: 14px;
+    border-radius: 12px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: 0.3s ease;
+}
+
+.btn-yt { background-color: #ff3131; }
+.btn-tk { background-color: #76e4f7; color: #000; }
+.btn-em { background-color: #1a73e8; }
+.btn-social:hover { transform: translateY(-3px); opacity: 0.9; }
+
+.content-card {
+    background: white;
+    border-radius: 28px;
+    padding: 35px 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+    border: 1px solid #f0f4f8;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.card-title {
+    font-size: 22px;
+    color: #0d1b3e;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #3182ce;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.btn-large {
+    width: 100%;
+    padding: 22px;
+    background-color: #0d1b3e;
+    color: white;
+    border-radius: 18px;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    transition: 0.3s ease;
+}
+.btn-large:hover { transform: scale(1.02); background-color: #1a2a4e; }
+
+.under-dev-box {
+    background: #f1f8ff;
+    border: 1px solid #c3e0ff;
+    padding: 15px;
+    border-radius: 50px;
+    color: #2c5282;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.footer-rights {
+    margin-top: 20px;
+    color: #0d1b3e;
+    font-size: 14px;
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+/* --- 4. تصميم صفحة الفيديوهات الأخيرة ( طبق الأصل من الصورة) --- */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.brand-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #0d1b3e;
+}
+
+.back-circle {
+    width: 38px;
+    height: 38px;
+    background: #e2e8f0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #475569;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.back-circle:hover { background: #cbd5e1; }
+
+.page-header-text {
+    text-align: right;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.main-title-text {
+    font-size: 32px;
+    font-weight: 900;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.sub-title-text {
+    color: #94a3b8;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* تصميم الكارت المودرن */
+.v-card-modern {
+    background: white;
+    border-radius: 25px; /* حواف دائرية واسعة */
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.04);
+    margin-bottom: 30px;
+    width: 100%;
+    border: 1px solid rgba(226, 232, 240, 0.6);
+    transition: 0.3s ease;
+}
+.v-card-modern:hover { transform: translateY(-5px); }
+
+.v-img-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #f1f5f9;
+}
+
+.v-actual-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.v-tag-new {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #3b82f6;
+    color: white;
+    padding: 5px 14px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.v-play-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 65px;
+    height: 65px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(8px);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 22px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.v-body-content {
+    padding: 25px;
+    text-align: right;
+}
+
+.v-main-heading {
+    font-size: 20px;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.v-main-desc {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.v-btn-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.v-btn-details {
+    background: #3b82f6;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.3);
+    transition: 0.3s;
+}
+.v-btn-details:hover { background: #2563eb; box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4); }
+
+/* حالة الكارت الفارغ (Illustration) */
+.empty-state-bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8fafc;
+}
+
+.empty-icon-group {
+    position: relative;
+    color: #cbd5e1;
+    font-size: 45px;
+    display: flex;
+    gap: 10px;
+}
+
+.mst-watermark {
+    position: absolute;
+    top: -15px;
+    right: -25px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #94a3b8;
+    letter-spacing: 1px;
+}
