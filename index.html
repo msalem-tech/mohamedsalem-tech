@@ -11,7 +11,7 @@
         html, body { height: 100%; margin: 0; display: flex; flex-direction: column; }
         .container { flex: 1 0 auto; display: flex; flex-direction: column; align-items: center; }
         
-        /* الصندوق الكبير اللي بيلم المحتوى كله */
+        /* الصندوق الكبير الذي يجمع المحتوى بالكامل */
         .content-main-box {
             background: white;
             border-radius: 28px;
@@ -26,7 +26,7 @@
             align-items: center;
         }
 
-        /* تنسيق كلمة المحتوى والخط اللي تحتها */
+        /* تنسيق كلمة المحتوى والخط الذي تحتها */
         .title-wrapper {
             text-align: center;
             margin-bottom: 25px;
@@ -52,7 +52,15 @@
             border-radius: 10px;
         }
 
-        .footer-rights { flex-shrink: 0; padding: 20px; text-align: center; width: 100%; font-weight: 600; opacity: 0.8; }
+        .footer-rights { 
+            flex-shrink: 0; 
+            padding: 20px; 
+            text-align: center; 
+            width: 100%; 
+            font-weight: 600; 
+            opacity: 0.8; 
+            color: #0d1b3e;
+        }
     </style>
 </head>
 <body>
@@ -61,11 +69,12 @@
 
     <div class="container">
         <div class="logo-container" style="margin-top: 20px;">
-            <img src="https://raw.githubusercontent.com/msalem-tech/mohamedsalem-tech/refs/heads/main/file_00000000e9f0722fb9cc5123df4d38cf.png" class="main-logo">
+            <img src="https://raw.githubusercontent.com/msalem-tech/mohamedsalem-tech/refs/heads/main/file_00000000e9f0722fb9cc5123df4d38cf.png" class="main-logo" alt="MST Logo">
         </div>
 
         <h1 class="profile-name">Mohamed Salem | Tech</h1>
-        <p class="tagline">شروحات برمجة، موبايلات، وكمبيوتر بطريقة بسيطة وسهلة 💻🚀</p>
+        
+        <p class="tagline">ببسط اللي بتعلمه في البرمجة والهواتف والكمبيوتر 💻📱✨</p>
 
         <div class="social-bar">
             <a href="https://youtube.com/@mohamedsalem-tech" target="_blank" class="btn-social btn-yt"><i class="fab fa-youtube"></i> YouTube</a>
