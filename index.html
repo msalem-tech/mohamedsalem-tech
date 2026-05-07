@@ -7,28 +7,40 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* تأكيد مكان الحقوق في أسفل الشاشة تماماً */
-        html, body {
-            height: 100%;
-            margin: 0;
-        }
-        body {
+        /* إجبار الحقوق على البقاء في القاع */
+        html, body { height: 100%; margin: 0; display: flex; flex-direction: column; }
+        .container { flex: 1 0 auto; display: flex; flex-direction: column; align-items: center; }
+        .footer-rights { flex-shrink: 0; padding: 25px; text-align: center; width: 100%; }
+
+        /* التعديل اللي كان ناقص: صندوق حول كلمة المحتوى */
+        .title-wrapper {
             display: flex;
-            flex-direction: column;
-        }
-        .container {
-            flex: 1 0 auto; /* بيخلي الكونتينر ياخد المساحة المتاحة ويزق الفوتر لتحت */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .footer-rights {
-            flex-shrink: 0;
-            padding: 20px;
+            justify-content: center;
             width: 100%;
-            text-align: center;
-            font-weight: 600;
-            opacity: 0.8;
+            margin-bottom: 25px;
+        }
+
+        .card-title {
+            font-size: 20px;
+            color: #0d1b3e;
+            position: relative;
+            background: #f1f5f9; /* لون المربع الصغير */
+            padding: 8px 25px; /* مساحة داخل المربع */
+            border-radius: 12px; /* انحناء أطراف المربع */
+            border: 1px solid #e2e8f0; /* إطار خفيف للمربع */
+            display: inline-block;
+        }
+
+        /* الخط الصغير الموسطن تحت المربع */
+        .card-title::after {
+            content: "";
+            position: absolute;
+            bottom: -8px; /* مكانه تحت المربع */
+            left: 25%; /* توسيط الخط */
+            width: 50%; /* طول الخط */
+            height: 4px;
+            background-color: #3182ce; /* لون الخط */
+            border-radius: 10px;
         }
     </style>
 </head>
@@ -45,29 +57,19 @@
         <p class="tagline">شروحات برمجة، موبايلات، وكمبيوتر بطريقة بسيطة وسهلة 💻🚀</p>
 
         <div class="social-bar">
-            <a href="https://youtube.com/@mohamedsalem-tech" target="_blank" class="btn-social btn-yt">
-                <i class="fab fa-youtube"></i> YouTube
-            </a>
-            <a href="https://www.tiktok.com/@mohamed.salem.tec" target="_blank" class="btn-social btn-tk">
-                <i class="fab fa-tiktok"></i> TikTok
-            </a>
-            <a href="mailto:believersdailyfort@gmail.com" class="btn-social btn-em">
-                <i class="fas fa-envelope"></i> Email
-            </a>
+            <a href="https://youtube.com/@mohamedsalem-tech" target="_blank" class="btn-social btn-yt"><i class="fab fa-youtube"></i> YouTube</a>
+            <a href="https://www.tiktok.com/@mohamed.salem.tec" target="_blank" class="btn-social btn-tk"><i class="fab fa-tiktok"></i> TikTok</a>
+            <a href="mailto:believersdailyfort@gmail.com" class="btn-social btn-em"><i class="fas fa-envelope"></i> Email</a>
         </div>
 
-        <div class="content-card" style="margin-top: 10px;">
+        <div class="content-card">
             <div class="title-wrapper">
                 <h2 class="card-title">المحتوى</h2>
             </div>
             
             <div class="button-group">
-                <a href="recent-videos.html" class="btn-large">
-                    <i class="fas fa-play-circle"></i> الفيديوهات الأخيرة
-                </a>
-                <button class="btn-large" id="featured-btn">
-                    <i class="fas fa-star"></i> الفيديوهات المميزة
-                </button>
+                <a href="recent-videos.html" class="btn-large"><i class="fas fa-play-circle"></i> الفيديوهات الأخيرة</a>
+                <button class="btn-large" id="featured-btn"><i class="fas fa-star"></i> الفيديوهات المميزة</button>
             </div>
 
             <div class="under-dev-box">
