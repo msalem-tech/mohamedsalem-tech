@@ -3,9 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الفيديوهات الأخيرة</title>
+    <title>الفيديوهات الأخيرة - Mohamed Salem Tech</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* إعدادات الصفحة لضمان بقاء الحقوق في القاع */
+        html, body { height: 100%; margin: 0; display: flex; flex-direction: column; }
+        .container { flex: 1 0 auto; display: flex; flex-direction: column; align-items: center; }
+        
+        /* ضبط المسافة في الهيدر */
+        .top-nav {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 30px;
+            padding: 0 5px;
+        }
+
+        /* عنوان الصفحة الرئيسي */
+        .page-main-title {
+            text-align: center;
+            margin-bottom: 30px;
+            width: 100%;
+        }
+        .page-main-title h1 {
+            font-size: 24px;
+            color: #0d1b3e;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        .page-main-title h1::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 20%;
+            width: 60%;
+            height: 5px;
+            background-color: #3182ce;
+            border-radius: 10px;
+        }
+
+        /* ضبط زر التفاصيل ليكون بالعرض وليس بالطول */
+        .v-btn-details {
+            display: inline-block; /* لضمان عدم أخذه للعرض بالكامل */
+            padding: 10px 40px;
+            background: #3b82f6;
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            border: 2px solid #2563eb;
+            box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
+            margin-top: 10px;
+        }
+
+        .footer-rights { 
+            flex-shrink: 0; 
+            padding: 20px; 
+            text-align: center; 
+            width: 100%; 
+            font-weight: 600; 
+            opacity: 0.8; 
+            color: #0d1b3e;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -13,17 +77,36 @@
              <a href="index.html" class="back-circle"><i class="fas fa-arrow-right"></i></a>
              <span class="brand-name">Mohamed Salem Tech</span>
         </div>
+
+        <div class="page-main-title">
+            <h1>الفيديوهات الأخيرة</h1>
+        </div>
+
         <div class="v-card-modern">
             <div class="v-img-container">
-                <img src="https://raw.githubusercontent.com/msalem-tech/mohamedsalem-tech/refs/heads/main/IMG_%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A5%D9%A0%D9%A7_%D9%A0%D9%A2%D9%A2%D9%A7%D9%A2%D9%A7.png" class="v-actual-img">
+                <img src="https://raw.githubusercontent.com/msalem-tech/mohamedsalem-tech/refs/heads/main/IMG_%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A5%D9%A0%D9%A7_%D9%A0%D9%A2%D9%A2%D9%A7%D9%A2%D9%A7.png" class="v-actual-img" alt="بوتات تيليجرام">
             </div>
             <div class="v-body-content" style="padding: 20px; text-align: right;">
-                <h3 class="v-main-heading">أقوى بوتات تيليجرام 😳🔥</h3>
-                <p class="v-main-desc">تحميل فيديوهات مجانًا في ثواني !</p>
+                <h3 style="font-size: 20px; color: #0d1b3e; margin-bottom: 10px;">أقوى بوتات تيليجرام 😳🔥</h3>
+                <p style="font-size: 14px; color: #64748b; margin-bottom: 15px;">تحميل فيديوهات مجانًا في ثواني !</p>
                 <a href="video-details.html" class="v-btn-details">عرض التفاصيل</a>
             </div>
         </div>
-        <div class="footer-rights">© 2026 Mohamed Salem</div>
+
+        <div class="v-card-modern">
+            <div class="v-img-container" style="background: #f8fafc; display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-video-slash" style="font-size: 50px; color: #cbd5e1;"></i>
+            </div>
+            <div class="v-body-content" style="padding: 20px; text-align: right;">
+                <h3 style="font-size: 20px; color: #0d1b3e; margin-bottom: 10px;">قريباً..</h3>
+                <p style="font-size: 14px; color: #64748b; margin-bottom: 15px;">يتم الآن تجهيز محتوى جديد ومميز.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-rights">
+        © 2026 Mohamed Salem - جميع الحقوق محفوظة
     </div>
 </body>
 </html>
