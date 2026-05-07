@@ -3,103 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تفاصيل الفيديو - Mohamed Salem Tech</title>
+    <title>تفاصيل الفيديو</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        /* تنسيقات خاصة بهذه الصفحة لضمان عدم حدوث تضارب */
-        
-        /* 1. جعل صورة الفيديو الرئيسية مستطيلة وفخمة */
-        .video-detail-card .v-img-container {
-            height: 250px !important; /* الارتفاع اللي بيخليها مستطيلة */
-            border-radius: 20px;
-            margin-bottom: 15px;
-        }
-
-        /* 2. أزرار المشاهدة بإطارات واضحة (اليوتيوب والتيك توك) */
-        .platform-btn {
-            border: 2px solid #e2e8f0 !important; /* الإطار اللي كان ناقص */
-            background: #ffffff !important;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05) !important;
-            transition: 0.3s;
-        }
-
-        /* 3. روابط البوتات (الصور الدائرية الصغيرة) */
-        .extra-link-item {
-            border: 1px solid #e2e8f0 !important;
-            border-radius: 50px !important; /* شكل بيضاوي محيط بالكل */
-            padding: 8px 15px !important;
-        }
-
-        .link-img-wrapper {
-            width: 45px !important;
-            height: 45px !important;
-            border-radius: 50% !important; /* الصورة دائرية تماماً */
-            border: 2px solid #3b82f6 !important;
-        }
-    </style>
 </head>
-<body class="recent-page-body">
+<body>
     <div class="container">
         <div class="top-nav">
              <a href="recent-videos.html" class="back-circle"><i class="fas fa-arrow-right"></i></a>
              <span class="brand-name">Mohamed Salem Tech</span>
         </div>
-
         <div class="video-detail-card">
             <div class="v-img-container">
                 <img src="https://raw.githubusercontent.com/msalem-tech/mohamedsalem-tech/refs/heads/main/IMG_%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A5%D9%A0%D9%A7_%D9%A0%D9%A2%D9%A2%D9%A7%D9%A2%D9%A7.png" class="v-actual-img">
             </div>
-            <div class="v-body-content">
+            <div class="v-body-content" style="padding: 20px; text-align: right;">
                 <h3 class="v-main-heading">أقوى بوتات تيليجرام 😳🔥</h3>
-                <p class="v-main-desc">استكشف أفضل الأدوات لتحميل وإدارة ملفاتك بسهولة.</p>
             </div>
         </div>
-
-        <div class="section-container">
-            <h4 class="section-title">مشاهدة الفيديو</h4>
+        <div style="width: 100%; margin-bottom: 20px;">
             <div class="watch-buttons">
-                <a href="https://youtube.com/@mohamedsalem-tech" target="_blank" class="platform-btn">
-                    <i class="fab fa-youtube" style="color: #ff0000;"></i> YouTube
-                </a>
-                <a href="https://www.tiktok.com/@mohamed.salem.tec" target="_blank" class="platform-btn">
-                    <i class="fab fa-tiktok" style="color: #000;"></i> TikTok
-                </a>
+                <a href="#" class="platform-btn"><i class="fab fa-youtube" style="color:red"></i> YouTube</a>
+                <a href="#" class="platform-btn"><i class="fab fa-tiktok"></i> TikTok</a>
             </div>
         </div>
-
-        <div class="section-container">
-            <h4 class="section-title">الروابط الإضافية</h4>
-            <div class="links-list">
-                
-                <a href="https://t.me/VjBoT" target="_blank" class="extra-link-item">
-                    <div class="link-img-wrapper"><img src="https://i.postimg.cc/kGyTnM8K/IMG-20260507-003817-643.jpg" class="link-custom-img"></div>
-                    <span class="link-text">بوت VJ Plus</span>
-                    <i class="fas fa-chevron-left"></i>
-                </a>
-
-                <a href="https://t.me/Allsavers_bot" target="_blank" class="extra-link-item">
-                    <div class="link-img-wrapper"><img src="https://i.postimg.cc/W3XWMbW7/IMG-20260507-003824-654.jpg" class="link-custom-img"></div>
-                    <span class="link-text">بوت ALL SAVERS</span>
-                    <i class="fas fa-chevron-left"></i>
-                </a>
-
-                <a href="https://t.me/download_it_bot" target="_blank" class="extra-link-item">
-                    <div class="link-img-wrapper"><img src="https://raw.githubusercontent.com/msalem-tech/mohamedsalem-tech/refs/heads/main/IMG_20260507_003831_184.jpg" class="link-custom-img"></div>
-                    <span class="link-text">بوت Download IT</span>
-                    <i class="fas fa-chevron-left"></i>
-                </a>
-
-                <a href="https://t.me/CCDBot" target="_blank" class="extra-link-item">
-                    <div class="link-img-wrapper"><img src="https://i.postimg.cc/yx2wZ8W6/IMG-20260507-003800-395.jpg" class="link-custom-img"></div>
-                    <span class="link-text">بوت Media Downloader</span>
-                    <i class="fas fa-chevron-left"></i>
-                </a>
-
-            </div>
+        <div style="width: 100%; text-align: right;">
+            <h4 style="margin-bottom: 15px;">الروابط الإضافية</h4>
+            <a href="https://t.me/VjBoT" class="extra-link-item">
+                <div class="link-img-wrapper"><img src="https://i.postimg.cc/kGyTnM8K/IMG-20260507-003817-643.jpg" class="link-custom-img"></div>
+                <span class="link-text">بوت VJ Plus</span>
+                <i class="fas fa-chevron-left"></i>
+            </a>
+            <a href="https://t.me/Allsavers_bot" class="extra-link-item">
+                <div class="link-img-wrapper"><img src="https://i.postimg.cc/W3XWMbW7/IMG-20260507-003824-654.jpg" class="link-custom-img"></div>
+                <span class="link-text">بوت ALL SAVERS</span>
+                <i class="fas fa-chevron-left"></i>
+            </a>
+            <a href="https://t.me/download_it_bot" class="extra-link-item">
+                <div class="link-img-wrapper"><img src="https://raw.githubusercontent.com/msalem-tech/mohamedsalem-tech/refs/heads/main/IMG_20260507_003831_184.jpg" class="link-custom-img"></div>
+                <span class="link-text">بوت Download IT</span>
+                <i class="fas fa-chevron-left"></i>
+            </a>
+            <a href="https://t.me/CCDBot" class="extra-link-item">
+                <div class="link-img-wrapper"><img src="https://i.postimg.cc/yx2wZ8W6/IMG-20260507-003800-395.jpg" class="link-custom-img"></div>
+                <span class="link-text">بوت Media Downloader</span>
+                <i class="fas fa-chevron-left"></i>
+            </a>
         </div>
-
-        <div class="footer-rights">© 2026 Mohamed Salem - جميع الحقوق محفوظة</div>
+        <div class="footer-rights">© 2026 Mohamed Salem</div>
     </div>
 </body>
 </html>
