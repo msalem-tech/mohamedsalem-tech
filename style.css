@@ -1,17 +1,10 @@
 /* الإعدادات العامة */
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
 body { background: linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%); min-height: 100vh; display: flex; justify-content: center; background-attachment: fixed; }
-.container { width: 100%; max-width: 480px; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; position: relative; }
+.container { width: 100%; max-width: 480px; padding: 40px 20px; display: flex; flex-direction: column; align-items: center; position: relative; min-height: 100vh; }
 
-/* الهيدر العلوي المحدث */
-.top-nav {
-    display: flex;
-    flex-direction: row-reverse; /* لعكس ترتيب العناصر داخل الهيدر */
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 25px;
-}
+/* الهيدر العلوي */
+.top-nav { display: flex; flex-direction: row-reverse; justify-content: space-between; align-items: center; width: 100%; margin-bottom: 25px; }
 .brand-name { font-size: 16px; font-weight: 700; color: #0d1b3e; }
 .back-circle { width: 38px; height: 38px; background: #e2e8f0; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #475569; text-decoration: none; }
 
@@ -20,30 +13,47 @@ body { background: linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%); min-height
 .main-title-text { font-size: 32px; font-weight: 900; color: #0f172a; margin-bottom: 8px; }
 .sub-title-text { color: #94a3b8; font-size: 14px; font-weight: 600; }
 
-/* الكارت المودرن بدون أيقونة تشغيل */
+/* كروت الفيديوهات */
 .v-card-modern { background: white; border-radius: 25px; overflow: hidden; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.04); margin-bottom: 30px; width: 100%; border: 1px solid rgba(226, 232, 240, 0.6); }
 .v-img-container { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #f1f5f9; }
 .v-actual-img { width: 100%; height: 100%; object-fit: cover; }
 .v-tag-new { position: absolute; top: 15px; left: 15px; background: #3b82f6; color: white; padding: 5px 14px; border-radius: 12px; font-size: 11px; font-weight: bold; }
-.v-body-content, .v-content-area { padding: 25px; text-align: right; }
+.v-body-content { padding: 25px; text-align: right; }
 .v-main-heading { font-size: 20px; font-weight: 800; color: #0f172a; margin-bottom: 12px; line-height: 1.4; }
 .v-main-desc { font-size: 14px; color: #64748b; line-height: 1.7; margin-bottom: 25px; }
 .v-btn-container { display: flex; justify-content: flex-end; }
 .v-btn-details { background: #3b82f6; color: white; padding: 12px 30px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 15px; box-shadow: 0 6px 20px rgba(59, 130, 246, 0.3); }
 
-/* الحقوق بالأسفل: الإنجليزي من اليمين */
+/* --- صندوق تحت التطوير (تمت إعادته لشكلة الأصلي) --- */
+.under-dev-box {
+    background: #f1f8ff;
+    border: 1px solid #c3e0ff;
+    padding: 15px;
+    border-radius: 50px;
+    color: #2c5282;
+    font-weight: bold;
+    font-size: 14px;
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* --- الحقوق بالأسفل (تم التوسيط بدقة) --- */
 .footer-rights {
-    margin-top: 20px;
+    margin-top: auto; /* يدفع الحقوق لأسفل الحاوية */
+    padding-top: 20px;
     color: #0d1b3e;
     font-size: 14px;
     font-weight: 600;
     opacity: 0.8;
     width: 100%;
-    text-align: right; /* لجعل النص يبدأ من اليمين */
-    direction: ltr;    /* لجعل ترتيب الكلمات إنجليزي ثم عربي */
+    text-align: center; /* توسيط النص */
+    direction: ltr;     /* الترتيب: الإنجليزي أولاً */
 }
 
-/* تصميم الصفحة الرئيسية (لو كنت ستستخدم نفس الملف) */
+/* تنسيقات إضافية للصفحة الرئيسية */
+.content-card { background: white; border-radius: 28px; padding: 35px 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.05); border: 1px solid #f0f4f8; width: 100%; margin-bottom: 25px; text-align: center; }
+.btn-large { width: 100%; padding: 22px; background-color: #0d1b3e; color: white; border-radius: 18px; text-decoration: none; font-size: 24px; font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 15px; margin-bottom: 15px; }
 .logo-container { width: 145px; height: 145px; background: white; border-radius: 50%; box-shadow: 0 10px 25px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; overflow: hidden; margin-bottom: 15px; display: flex; align-items: center; justify-content: center; }
 .main-logo { width: 100%; height: 100%; object-fit: cover; }
 .profile-name { font-size: 30px; color: #0d1b3e; font-weight: 800; margin-bottom: 5px; }
@@ -51,8 +61,3 @@ body { background: linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%); min-height
 .social-bar { display: flex; gap: 10px; width: 100%; margin-bottom: 30px; }
 .btn-social { flex: 1; padding: 14px; border-radius: 12px; color: white; font-weight: bold; text-decoration: none; font-size: 14px; display: flex; align-items: center; justify-content: center; gap: 8px; }
 .btn-yt { background-color: #ff3131; } .btn-tk { background-color: #76e4f7; color: #000; } .btn-em { background-color: #1a73e8; }
-.content-card { background: white; border-radius: 28px; padding: 35px 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.05); border: 1px solid #f0f4f8; width: 100%; margin-bottom: 25px; text-align: center; }
-.btn-large { width: 100%; padding: 22px; background-color: #0d1b3e; color: white; border-radius: 18px; text-decoration: none; font-size: 24px; font-weight: bold; display: flex; align-items: center; justify-content: center; gap: 15px; margin-bottom: 15px; }
-.empty-state-bg { display: flex; align-items: center; justify-content: center; background: #f8fafc; }
-.empty-icon-group { position: relative; color: #cbd5e1; font-size: 45px; display: flex; gap: 10px; }
-.mst-watermark { position: absolute; top: -15px; right: -25px; font-size: 16px; font-weight: bold; color: #94a3b8; }
