@@ -1,4 +1,4 @@
-/* --- 1. الإعدادات العامة للموقع --- */
+/* --- 1. الإعدادات العامة --- */
 * {
     margin: 0;
     padding: 0;
@@ -25,79 +25,27 @@ body {
     min-height: 100vh;
 }
 
-/* خلفية النقاط */
-.bg-pattern {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    background-image: radial-gradient(#d1e3f8 1.5px, transparent 1.5px);
-    background-size: 20px 20px;
-    z-index: -1;
-    opacity: 0.5;
-}
-.top-left { top: 0; left: 0; }
-.bottom-right { bottom: 0; right: 0; }
-
-/* --- 2. الهيدر (عكس الاتجاهات) --- */
+/* --- 2. الهيدر المعكوس (للصفحة الثانية) --- */
 .top-nav {
     display: flex;
-    flex-direction: row-reverse; /* السهم يمين والاسم يسار */
+    flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     margin-bottom: 25px;
 }
+.brand-name { font-size: 16px; font-weight: 700; color: #0d1b3e; }
+.back-circle { width: 38px; height: 38px; background: #e2e8f0; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #475569; text-decoration: none; }
 
-.brand-name {
-    font-size: 16px;
-    font-weight: 700;
-    color: #0d1b3e;
-}
-
-.back-circle {
-    width: 38px;
-    height: 38px;
-    background: #e2e8f0;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #475569;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-/* --- 3. الصفحة الرئيسية (Index) --- */
+/* --- 3. الصفحة الرئيسية --- */
 .logo-container {
-    width: 145px;
-    height: 145px;
-    background: white;
-    border-radius: 50%;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    border: 1px solid #e2e8f0;
-    overflow: hidden;
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 145px; height: 145px; background: white; border-radius: 50%;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1); border: 1px solid #e2e8f0;
+    overflow: hidden; margin-bottom: 15px; display: flex; align-items: center; justify-content: center;
 }
-
 .main-logo { width: 100%; height: 100%; object-fit: cover; }
-
-.profile-name { font-size: 30px; color: #0d1b3e; font-weight: 800; margin-bottom: 5px; }
-
-.tagline { color: #718096; font-size: 16px; margin-bottom: 30px; }
-
-.social-bar { display: flex; gap: 10px; width: 100%; margin-bottom: 30px; }
-
-.btn-social {
-    flex: 1; padding: 14px; border-radius: 12px; color: white; font-weight: bold;
-    text-decoration: none; font-size: 14px; display: flex; align-items: center;
-    justify-content: center; gap: 8px; transition: 0.3s;
-}
-.btn-yt { background-color: #ff3131; }
-.btn-tk { background-color: #76e4f7; color: #000; }
-.btn-em { background-color: #1a73e8; }
+.profile-name { font-size: 28px; color: #0d1b3e; font-weight: 800; margin-bottom: 8px; }
+.tagline { color: #718096; font-size: 15px; margin-bottom: 30px; line-height: 1.5; padding: 0 10px; }
 
 .content-card {
     background: white; border-radius: 28px; padding: 35px 20px;
@@ -105,78 +53,56 @@ body {
     width: 100%; margin-bottom: 25px; text-align: center;
 }
 
-/* الشرطة تحت كلمة المحتوى */
+/* الشرطة الاحترافية المنحنية القصيرة */
 .card-title {
-    font-size: 22px;
-    color: #0d1b3e;
-    margin-bottom: 30px;
-    border-bottom: 3px solid #3182ce;
-    display: inline-block;
-    padding-bottom: 5px;
+    font-size: 22px; color: #0d1b3e; margin-bottom: 30px;
+    position: relative; display: inline-block; padding-bottom: 10px;
+}
+.card-title::after {
+    content: ""; position: absolute; bottom: 0; right: 25%;
+    width: 50%; height: 5px; background-color: #3182ce; border-radius: 10px;
 }
 
 .btn-large {
-    width: 100%; padding: 22px; background-color: #0d1b3e; color: white;
-    border-radius: 18px; text-decoration: none; font-size: 24px; font-weight: bold;
+    width: 100%; padding: 20px; background-color: #0d1b3e; color: white;
+    border-radius: 18px; text-decoration: none; font-size: 22px; font-weight: bold;
     display: flex; align-items: center; justify-content: center; gap: 15px; margin-bottom: 15px;
 }
 
-/* صندوق تحت التطوير (بإطاره الأصلي) */
 .under-dev-box {
-    background: #f1f8ff;
-    border: 1px solid #c3e0ff;
-    padding: 15px;
-    border-radius: 50px;
-    color: #2c5282;
-    font-weight: bold;
-    font-size: 14px;
-    width: 100%;
-    margin-top: 10px;
-    text-align: center;
+    background: #f1f8ff; border: 1px solid #c3e0ff; padding: 15px;
+    border-radius: 50px; color: #2c5282; font-weight: bold; font-size: 14px;
+    width: 100%; text-align: center; margin-top: 10px;
 }
 
-/* --- 4. صفحة الفيديوهات الأخيرة (Modern Cards) --- */
-.page-header-text { text-align: right; width: 100%; margin-bottom: 30px; }
-.main-title-text { font-size: 32px; font-weight: 900; color: #0f172a; margin-bottom: 8px; }
-.sub-title-text { color: #94a3b8; font-size: 14px; font-weight: 600; }
-
+/* --- 4. كروت الفيديوهات --- */
 .v-card-modern {
     background: white; border-radius: 25px; overflow: hidden;
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.04); margin-bottom: 30px;
     width: 100%; border: 1px solid rgba(226, 232, 240, 0.6);
 }
-
 .v-img-container { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #f1f5f9; }
 .v-actual-img { width: 100%; height: 100%; object-fit: cover; }
 .v-tag-new {
     position: absolute; top: 15px; left: 15px; background: #3b82f6;
     color: white; padding: 5px 14px; border-radius: 12px; font-size: 11px; font-weight: bold;
 }
-
 .v-body-content { padding: 25px; text-align: right; }
-.v-main-heading { font-size: 20px; font-weight: 800; color: #0f172a; margin-bottom: 12px; line-height: 1.4; }
-.v-main-desc { font-size: 14px; color: #64748b; line-height: 1.7; margin-bottom: 25px; }
-
-.v-btn-container { display: flex; justify-content: flex-end; }
+.v-main-heading { font-size: 20px; font-weight: 800; color: #0f172a; margin-bottom: 10px; }
+.v-main-desc { font-size: 14px; color: #64748b; margin-bottom: 25px; line-height: 1.6; }
 .v-btn-details {
-    background: #3b82f6; color: white; padding: 12px 30px; border-radius: 50px;
-    text-decoration: none; font-weight: bold; font-size: 15px; box-shadow: 0 6px 20px rgba(59, 130, 246, 0.3);
+    display: inline-block; background: #3b82f6; color: white; padding: 12px 30px;
+    border-radius: 50px; text-decoration: none; font-weight: bold; box-shadow: 0 6px 20px rgba(59, 130, 246, 0.3);
 }
 
-/* الكارت الفارغ */
-.empty-state-bg { display: flex; align-items: center; justify-content: center; background: #f8fafc; }
-.empty-icon-group { position: relative; color: #cbd5e1; font-size: 45px; display: flex; gap: 10px; }
-.mst-watermark { position: absolute; top: -15px; right: -25px; font-size: 16px; font-weight: bold; color: #94a3b8; }
-
-/* --- 5. الحقوق (موسطنة بالكامل) --- */
+/* --- 5. الحقوق موسطنة بالكامل --- */
 .footer-rights {
-    margin-top: auto; 
-    padding: 20px 0;
-    color: #0d1b3e;
-    font-size: 14px;
-    font-weight: 600;
-    opacity: 0.8;
-    width: 100%;
-    text-align: center; /* التوسيط */
-    direction: ltr;     /* الإنجليزي من اليمين */
+    margin-top: auto; padding: 20px 0; color: #0d1b3e;
+    font-size: 14px; font-weight: 600; opacity: 0.8; width: 100%;
+    text-align: center; direction: ltr;
 }
+
+/* السوشيال ميديا */
+.social-bar { display: flex; gap: 10px; width: 100%; margin-bottom: 30px; }
+.btn-social { flex: 1; padding: 14px; border-radius: 12px; color: white; font-weight: bold; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 8px; }
+.btn-yt { background-color: #ff3131; } .btn-tk { background-color: #76e4f7; color: #000; } .btn-em { background-color: #1a73e8; }
