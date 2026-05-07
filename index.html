@@ -7,9 +7,25 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* إعدادات الصفحة لضمان بقاء الحقوق في القاع */
-        html, body { height: 100%; margin: 0; display: flex; flex-direction: column; }
-        .container { flex: 1 0 auto; display: flex; flex-direction: column; align-items: center; }
+        /* إعدادات الصفحة لضمان البداية من مكان صح */
+        html, body { 
+            height: 100%; 
+            margin: 0; 
+            display: block; /* تغيير من flex لـ block لمنع سحب العناصر لفوق */
+            background: linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%);
+        }
+
+        .container { 
+            width: 100%; 
+            max-width: 480px; 
+            margin: 0 auto; 
+            padding: 40px 20px; /* مسافة 40 بيكسل من فوق تضمن ظهور اللوجو صح */
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            min-height: 100vh;
+            position: relative;
+        }
         
         /* الصندوق الكبير الذي يجمع المحتوى بالكامل */
         .content-main-box {
@@ -17,8 +33,7 @@
             border-radius: 28px;
             padding: 30px 20px;
             width: 100%;
-            max-width: 440px;
-            margin-top: 10px;
+            margin-top: 20px;
             box-shadow: 0 15px 35px rgba(0,0,0,0.05);
             border: 1px solid #f0f4f8;
             display: flex;
@@ -53,13 +68,13 @@
         }
 
         .footer-rights { 
-            flex-shrink: 0; 
-            padding: 20px; 
             text-align: center; 
+            padding: 30px 10px; 
             width: 100%; 
             font-weight: 600; 
             opacity: 0.8; 
             color: #0d1b3e;
+            margin-top: auto; /* يزق الحقوق لآخر الصفحة */
         }
     </style>
 </head>
@@ -68,11 +83,11 @@
     <div class="bg-pattern bottom-right"></div>
 
     <div class="container">
-        <div class="logo-container" style="margin-top: 20px;">
+        <div class="logo-container">
             <img src="https://raw.githubusercontent.com/msalem-tech/mohamedsalem-tech/refs/heads/main/file_00000000e9f0722fb9cc5123df4d38cf.png" class="main-logo" alt="MST Logo">
         </div>
 
-        <h1 class="profile-name">Mohamed Salem | Tech</h1>
+        <h1 class="profile-name" style="margin-top: 10px;">Mohamed Salem | Tech</h1>
         
         <p class="tagline">ببسط اللي بتعلمه في البرمجة والهواتف والكمبيوتر 💻📱✨</p>
 
@@ -96,10 +111,10 @@
                 🚧 الموقع تحت التطوير - سيتم إضافة محتوى قريباً
             </div>
         </div>
-    </div>
 
-    <div class="footer-rights">
-        © 2026 Mohamed Salem - جميع الحقوق محفوظة
+        <div class="footer-rights">
+            © 2026 Mohamed Salem - جميع الحقوق محفوظة
+        </div>
     </div>
 
     <script>
