@@ -6,73 +6,74 @@
     <title>تفاصيل الفيديو - Mohamed Salem | Tech</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
-        body { margin: 0; padding: 0; display: block; background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        /* التعديلات الخاصة بهذه الصفحة فقط */
+        body { margin: 0; padding: 0; display: block; background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%); }
         .container { width: 100%; max-width: 480px; margin: 0 auto; padding: 10px 20px; display: flex; flex-direction: column; }
         
-        .top-nav { display: flex; flex-direction: row-reverse; justify-content: space-between; align-items: center; width: 100%; padding: 20px 0; }
-        .brand-name { font-size: 18px; font-weight: 700; color: #1e293b; }
+        /* تأثير الاهتزاز الرايق */
+        @keyframes gentleShake {
+            0% { transform: rotate(0deg); }
+            20% { transform: rotate(0.5deg); }
+            40% { transform: rotate(-0.5deg); }
+            60% { transform: rotate(0.3deg); }
+            80% { transform: rotate(-0.3deg); }
+            100% { transform: rotate(0deg); }
+        }
 
-        .video-description { font-size: 14.5px; color: #475569; line-height: 1.8; text-align: right; background: #ffffff; padding: 15px; border-radius: 18px; margin-top: 15px; border: 1px solid #e2e8f0; }
-        
-        /* تنسيق صندوق التحذير الجديد (هادئ وراقي) */
-        .warning-section { margin-top: 25px; background: #ffffff; border: 1px solid #3182ce; border-radius: 20px; padding: 20px; text-align: right; box-shadow: 0 4px 15px rgba(49, 130, 206, 0.05); }
+        /* صندوق التحذير */
+        .warning-section { 
+            margin-top: 25px; 
+            background: #ffffff; 
+            border: 2px solid #3182ce; 
+            border-radius: 20px; 
+            padding: 20px; 
+            text-align: right; 
+            box-shadow: 0 4px 15px rgba(49, 130, 206, 0.1);
+            /* هنا الاهتزاز بيحصل كل 4 ثواني براحة */
+            animation: gentleShake 4s ease-in-out infinite;
+        }
+
         .warning-header { display: block; font-size: 18px; font-weight: 800; color: #3182ce; margin-bottom: 12px; border-bottom: 1px solid #ebf8ff; padding-bottom: 8px; }
 
-        /* زرار الطريقة الجديد (Style Minimalist) */
+        /* زرار الطريقة */
         .archive-toggle-btn { 
-            width: 100%; 
-            padding: 14px; 
-            background: #f8fafc; 
-            color: #1e293b; 
-            border: 2px solid #e2e8f0; 
-            border-radius: 15px; 
-            font-size: 15px; 
-            font-weight: 700; 
-            cursor: pointer; 
-            margin-top: 15px; 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center;
-            transition: all 0.3s ease;
+            width: 100%; padding: 14px; background: #f8fafc; color: #1e293b; 
+            border: 2px solid #e2e8f0; border-radius: 15px; font-size: 15px; 
+            font-weight: 700; cursor: pointer; margin-top: 15px; 
+            display: flex; justify-content: space-between; align-items: center;
         }
-        .archive-toggle-btn:active { transform: scale(0.98); background: #edf2f7; }
 
         .archive-content { display: none; margin-top: 15px; }
-        .step-card { background: #ffffff; border-radius: 20px; padding: 15px; margin-bottom: 20px; border: 1px solid #f1f5f9; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.02); }
+        .step-card { background: #ffffff; border-radius: 20px; padding: 15px; margin-bottom: 20px; border: 1px solid #f1f5f9; text-align: center; }
         .step-img { width: 100%; border-radius: 12px; margin-bottom: 15px; border: 1px solid #f1f5f9; }
 
-        .watch-section-box { background: white; border-radius: 25px; padding: 20px; width: 100%; margin: 25px 0; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #f0f4f8; text-align: center; }
-        .watch-title { font-size: 17px; color: #1e293b; font-weight: 700; margin-bottom: 15px; display: block; }
+        /* أزرار المشاهدة الأصلية */
+        .watch-section-box { background: white; border-radius: 25px; padding: 20px; margin: 25px 0; border: 1px solid #f0f4f8; text-align: center; }
         .watch-buttons { display: flex; gap: 12px; width: 100%; }
-        .platform-btn { flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px; background: #fff; border-radius: 15px; text-decoration: none; color: #1e293b; font-weight: bold; border: 2px solid #e2e8f0; font-size: 14px; }
-
-        .footer-rights { text-align: center; padding: 30px 10px; width: 100%; font-weight: 600; opacity: 0.7; color: #64748b; font-size: 13px; }
+        .platform-btn { flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px; background: #fff; border-radius: 15px; text-decoration: none; color: #1e293b; font-weight: bold; border: 2px solid #e2e8f0; }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="top-nav">
-             <a href="recent-videos.html" class="back-circle" style="text-decoration:none; background:#f1f5f9; width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#1e293b;">
+        <div class="top-nav" style="display: flex; flex-direction: row-reverse; justify-content: space-between; align-items: center; width: 100%; padding: 20px 0;">
+             <a href="recent-videos.html" style="text-decoration:none; background:#f1f5f9; width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#1e293b;">
                 <i class="fas fa-arrow-right"></i>
              </a>
-             <span class="brand-name">Mohamed Salem | Tech</span>
+             <span class="brand-name" style="font-size: 18px; font-weight: 700;">Mohamed Salem | Tech</span>
         </div>
 
         <div class="video-detail-card">
-            <div class="v-img-container" style="height: 220px; border-radius: 24px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+            <div class="v-img-container" style="height: 220px; border-radius: 24px; overflow: hidden;">
                 <img src="https://raw.githubusercontent.com/msalem-tech/mohamedsalem-tech/refs/heads/main/IMG_%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A5%D9%A0%D9%A7_%D9%A0%D9%A2%D9%A2%D9%A7%D9%A2%D9%A7.png" style="width:100%; height:100%; object-fit:cover;">
             </div>
             
             <div class="v-body-content" style="padding: 20px 0; text-align: right;">
-                <h3 style="color: #1e293b; font-size: 21px; margin-bottom: 10px;">أقوى بوتات تيليجرام 😳🔥</h3>
+                <h3 style="color: #1e293b; font-size: 21px;">أقوى بوتات تيليجرام 😳🔥</h3>
                 
                 <div class="video-description">
-                    بدل ما تستخدم برامج تحميل زي Snaptube وVidMate وغيرها من التطبيقات المجهولة 👀<br>
-                    اللي ناس كتير بتعتبرها أفضل برامج تحميل… لكنها اتعرضت لاتهامات ومشاكل تتعلق بالخصوصية وتسريب بيانات المستخدمين، غير الإعلانات المزعجة واستهلاك البطارية بشكل كبير 😳<br><br>
-                    وده غير إن أغلب البرامج دي بقت مليانة إعلانات غير مناسبة ومحتوى مزعج جدًا للأسف، ومعظم الناس بقت تستخدمها  ⚠️<br><br>
-                    ففي الفيديو ده هقولك على بديل أذكى وأسهل باستخدام بوتات تيليجرام 🔥<br><br>
-                    وده الجزء الأول... 😁
+                    بدل ما تستخدم برامج تحميل زي Snaptube وVidMate... في الفيديو ده هقولك على بديل أذكى وأسهل باستخدام بوتات تيليجرام 🔥
                 </div>
 
                 <div class="warning-section">
@@ -92,48 +93,41 @@
                     </button>
 
                     <div class="archive-content" id="archive-box">
-                        <div class="step-card"><img src="https://i.postimg.cc/qR5q8Zf0/IMG-20260515-050511.jpg" class="step-img"><span class="step-title">【 اضغط انضمام 】</span><p class="step-desc">⬇ اضغط على زرار "انضمام" الموجود في أسفل صفحة القناة</p></div>
-                        <div class="step-card"><img src="https://i.postimg.cc/gjgdPxsm/IMG-20260515-025429.jpg" class="step-img"><span class="step-title">【 اضغط كتم الصوت 】</span><p class="step-desc">⬇ اضغط على زرار "كتم الصوت" الموجود أسفل القناة</p></div>
-                        <div class="step-card"><img src="https://i.postimg.cc/BnKWmYdk/IMG-20260515-030153.jpg" class="step-img"><span class="step-title">【 اضغط مطولًا على القناة 】</span><p class="step-desc">⬇ اضغط ضغطة مطولة على اسم القناة لحد ما يتحدد عليها علامة صح ☑️</p></div>
-                        <div class="step-card"><img src="https://i.postimg.cc/pdJ6SgkY/IMG-20260515-025928.jpg" class="step-img"><span class="step-title">【 اضغط على الثلاث نقاط 】</span><p class="step-desc">⬇ اضغط على زرار الثلاث نقاط (⋮) اللي فوق في الصفحة</p></div>
-                        <div class="step-card"><img src="https://i.postimg.cc/1RjYb0ct/IMG-20260515-025646.jpg" class="step-img"><span class="step-title">【 اضغط أرشفة 】</span><p class="step-desc">⬇ اضغط على زرار "أرشفة" عشان تنقل القناة للأرشيف</p></div>
+                        <div class="step-card"><img src="https://i.postimg.cc/qR5q8Zf0/IMG-20260515-050511.jpg" class="step-img"><span class="step-title">【 اضغط انضمام 】</span></div>
+                        <div class="step-card"><img src="https://i.postimg.cc/gjgdPxsm/IMG-20260515-025429.jpg" class="step-img"><span class="step-title">【 اضغط كتم الصوت 】</span></div>
+                        <div class="step-card"><img src="https://i.postimg.cc/BnKWmYdk/IMG-20260515-030153.jpg" class="step-img"><span class="step-title">【 اضغط مطولًا على القناة 】</span></div>
+                        <div class="step-card"><img src="https://i.postimg.cc/pdJ6SgkY/IMG-20260515-025928.jpg" class="step-img"><span class="step-title">【 اضغط على الثلاث نقاط 】</span></div>
+                        <div class="step-card"><img src="https://i.postimg.cc/1RjYb0ct/IMG-20260515-025646.jpg" class="step-img"><span class="step-title">【 اضغط أرشفة 】</span></div>
                     </div>
 
                     <div style="margin-top:20px; font-size: 14px; color: #334155; line-height: 1.7;">
-                        ودايماً خليك واعي إن أي رابط غريب يتبعت في القنوات دي مالناش دعوة بيه..<br>
-                        إحنا داخلين ناخد مصلحتنا من البوت وبس..<br><br>
-                        وأنا بقولك كده عشان تستخدم البوت وأنت مطمن وتتجنب أي محتوى غير جيد سواء <b>تقني</b> أو <b>ديني</b> ممكن ينشروه في القنوات دي..<br><br>
-                        وأنا بريء قدام ربنا وبخلي مسؤوليتي تماماً..<br>
-                        اللهم قد بلغت اللهم فاشهد 🤍<br><br>
-                        ولو واجهتك أي مشكلة في أي وقت فـ اتواصل معايا وأنا إن شاء الله هساعدك 🙏
+                        إحنا داخلين ناخد مصلحتنا من البوت وبس.. وأنا بريء قدام ربنا وبخلي مسؤوليتي تماماً.. اللهم قد بلغت 🤍
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="watch-section-box">
-            <span class="watch-title">مشاهدة على</span>
+            <span class="watch-title" style="display:block; margin-bottom:15px; font-weight:700;">مشاهدة على</span>
             <div class="watch-buttons">
                 <a href="https://youtube.com/@mohamedsalem-tech" target="_blank" class="platform-btn"><i class="fab fa-youtube" style="color: #ff0000;"></i> YouTube</a>
                 <a href="https://www.tiktok.com/@mohamed.salem.tec" target="_blank" class="platform-btn"><i class="fab fa-tiktok" style="color: #000;"></i> TikTok</a>
             </div>
         </div>
 
-        <div style="width: 100%; text-align: right; margin-bottom: 20px;">
-            <h4 style="margin-bottom: 15px; color: #1e293b;">الروابط الإضافية</h4>
-            <div class="links-list">
-                <a href="https://t.me/Allsavers_bot" target="_blank" class="extra-link-item">
-                    <div class="link-img-wrapper"><img src="https://i.postimg.cc/W3XWMbW7/IMG-20260507-003824-654.jpg" class="link-custom-img"></div>
-                    <span class="link-text">بوت ALL SAVERS</span><i class="fas fa-chevron-left"></i>
-                </a>
-                <a href="https://t.me/download_it_bot?start=ref6706979670" target="_blank" class="extra-link-item">
-                    <div class="link-img-wrapper"><img src="https://raw.githubusercontent.com/msalem-tech/mohamedsalem-tech/refs/heads/main/IMG_20260507_003831_184.jpg" class="link-custom-img"></div>
-                    <span class="link-text">بوت Download IT</span><i class="fas fa-chevron-left"></i>
-                </a>
-            </div>
+        <div class="links-list" style="text-align: right;">
+            <h4 style="color: #1e293b;">الروابط الإضافية</h4>
+            <a href="https://t.me/Allsavers_bot" target="_blank" class="extra-link-item">
+                <div class="link-img-wrapper"><img src="https://i.postimg.cc/W3XWMbW7/IMG-20260507-003824-654.jpg" class="link-custom-img"></div>
+                <span class="link-text">بوت ALL SAVERS</span><i class="fas fa-chevron-left"></i>
+            </a>
+            <a href="https://t.me/download_it_bot?start=ref6706979670" target="_blank" class="extra-link-item">
+                <div class="link-img-wrapper"><img src="https://raw.githubusercontent.com/msalem-tech/mohamedsalem-tech/refs/heads/main/IMG_20260507_003831_184.jpg" class="link-custom-img"></div>
+                <span class="link-text">بوت Download IT</span><i class="fas fa-chevron-left"></i>
+            </a>
         </div>
 
-        <div class="footer-rights">© 2026 Mohamed Salem - جميع الحقوق محفوظة</div>
+        <div class="footer-rights" style="text-align: center; padding: 30px 0; opacity: 0.7;">© 2026 Mohamed Salem - جميع الحقوق محفوظة</div>
     </div>
 
     <script>
