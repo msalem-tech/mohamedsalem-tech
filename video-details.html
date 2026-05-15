@@ -7,17 +7,14 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* نظام الإنذار الخارجي */
+        /* تأثير الإنذار والطفطفة */
         @keyframes emergency-pulse {
             0% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.4); border-color: #feb2b2; }
             50% { box-shadow: 0 0 15px 5px rgba(220, 38, 38, 0.2); border-color: #f87171; }
             100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.4); border-color: #feb2b2; }
         }
 
-        .warning-alarm {
-            animation: emergency-pulse 1.5s infinite ease-in-out;
-            border-width: 2px !important;
-        }
+        .warning-alarm { animation: emergency-pulse 1.5s infinite ease-in-out; border-width: 2px !important; }
 
         .video-description {
             font-size: 14.5px; color: #475569; line-height: 1.8; text-align: right;
@@ -35,15 +32,29 @@
         .step-card { background: #ffffff; border-radius: 20px; padding: 15px; margin-bottom: 20px; border: 1px solid #e2e8f0; text-align: center; }
         .step-img { width: 100%; border-radius: 12px; margin-bottom: 10px; }
 
-        /* تبريز سيكشن المشاهدة بلون الموقع */
-        .watch-container-box {
-            background: #f1f5f9; /* لون هادي متناسق مع الموقع */
-            border: 1px solid #e2e8f0;
-            border-radius: 25px;
-            padding: 20px;
-            margin: 25px 0;
-            text-align: center;
+        .watch-container-box { background: #f1f5f9; border: 1px solid #e2e8f0; border-radius: 25px; padding: 20px; margin: 25px 0; text-align: center; }
+
+        /* تحسين شكل الروابط الإضافية */
+        .links-list { text-align: right; margin-bottom: 30px; }
+        .links-list h4 { color: #0d1b3e; margin-bottom: 15px; font-size: 18px; padding-right: 5px; }
+        
+        .extra-link-item {
+            display: flex; align-items: center; justify-content: space-between;
+            background: #ffffff; padding: 12px 15px; border-radius: 18px;
+            text-decoration: none; margin-bottom: 12px; border: 1px solid #f1f5f9;
+            transition: all 0.3s ease; box-shadow: 0 2px 5px rgba(0,0,0,0.02);
         }
+        
+        .extra-link-item:active { transform: scale(0.98); background: #f8fafc; }
+
+        .link-img-wrapper { width: 45px; height: 45px; border-radius: 12px; overflow: hidden; margin-left: 12px; flex-shrink: 0; }
+        .link-custom-img { width: 100%; height: 100%; object-fit: cover; }
+        
+        .link-info { flex-grow: 1; display: flex; flex-direction: column; }
+        .link-text { color: #1e293b; font-weight: 700; font-size: 15px; }
+        .link-subtext { color: #64748b; font-size: 12px; margin-top: 2px; }
+        
+        .extra-link-item i.fa-chevron-left { color: #cbd5e1; font-size: 14px; }
     </style>
 </head>
 <body>
@@ -115,15 +126,29 @@
             </div>
         </div>
 
-        <div class="links-list" style="text-align: right; margin-bottom: 20px;">
-            <h4 style="color: #0d1b3e;">الروابط الإضافية</h4>
+        <div class="links-list">
+            <h4>الروابط الإضافية</h4>
+            
             <a href="https://t.me/Allsavers_bot" target="_blank" class="extra-link-item">
-                <div class="link-img-wrapper"><img src="https://i.postimg.cc/W3XWMbW7/IMG-20260507-003824-654.jpg" class="link-custom-img"></div>
-                <span class="link-text">بوت ALL SAVERS</span><i class="fas fa-chevron-left"></i>
+                <div class="link-img-wrapper">
+                    <img src="https://i.postimg.cc/W3XWMbW7/IMG-20260507-003824-654.jpg" class="link-custom-img">
+                </div>
+                <div class="link-info">
+                    <span class="link-text">بوت ALL SAVERS</span>
+                    <span class="link-subtext">لتحميل الفيديوهات من كل المنصات</span>
+                </div>
+                <i class="fas fa-chevron-left"></i>
             </a>
+
             <a href="https://t.me/download_it_bot?start=ref6706979670" target="_blank" class="extra-link-item">
-                <div class="link-img-wrapper"><img src="https://raw.githubusercontent.com/msalem-tech/mohamedsalem-tech/refs/heads/main/IMG_20260507_003831_184.jpg" class="link-custom-img"></div>
-                <span class="link-text">بوت Download IT</span><i class="fas fa-chevron-left"></i>
+                <div class="link-img-wrapper">
+                    <img src="https://raw.githubusercontent.com/msalem-tech/mohamedsalem-tech/refs/heads/main/IMG_20260507_003831_184.jpg" class="link-custom-img">
+                </div>
+                <div class="link-info">
+                    <span class="link-text">بوت Download IT</span>
+                    <span class="link-subtext">بوت سريع وسهل للاستخدام</span>
+                </div>
+                <i class="fas fa-chevron-left"></i>
             </a>
         </div>
 
@@ -145,4 +170,3 @@
     </script>
 </body>
 </html>
-
