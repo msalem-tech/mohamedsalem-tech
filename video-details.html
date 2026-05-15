@@ -7,50 +7,65 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { margin: 0; padding: 0; display: block; background: linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%); }
+        body { margin: 0; padding: 0; display: block; background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         .container { width: 100%; max-width: 480px; margin: 0 auto; padding: 10px 20px; display: flex; flex-direction: column; }
         
-        /* الهيدر الأصلي */
-        .top-nav { display: flex; flex-direction: row-reverse; justify-content: space-between; align-items: center; width: 100%; padding: 20px 0; margin-bottom: 10px; }
-        .brand-name { font-size: 18px; font-weight: 700; color: #0d1b3e; }
+        .top-nav { display: flex; flex-direction: row-reverse; justify-content: space-between; align-items: center; width: 100%; padding: 20px 0; }
+        .brand-name { font-size: 18px; font-weight: 700; color: #1e293b; }
 
-        /* النصوص */
-        .video-description { font-size: 14.5px; color: #475569; line-height: 1.8; text-align: right; background: #f8fafc; padding: 15px; border-radius: 15px; margin-top: 15px; border-right: 4px solid #3b82f6; }
+        .video-description { font-size: 14.5px; color: #475569; line-height: 1.8; text-align: right; background: #ffffff; padding: 15px; border-radius: 18px; margin-top: 15px; border: 1px solid #e2e8f0; }
         
-        .warning-section { margin-top: 25px; background: #fff5f5; border: 1px solid #feb2b2; border-radius: 20px; padding: 20px; text-align: right; }
-        .warning-header { display: block; font-size: 18px; font-weight: 800; color: #c53030; margin-bottom: 12px; border-bottom: 1px solid #fed7d7; padding-bottom: 8px; }
+        /* تنسيق صندوق التحذير الجديد (هادئ وراقي) */
+        .warning-section { margin-top: 25px; background: #ffffff; border: 1px solid #3182ce; border-radius: 20px; padding: 20px; text-align: right; box-shadow: 0 4px 15px rgba(49, 130, 206, 0.05); }
+        .warning-header { display: block; font-size: 18px; font-weight: 800; color: #3182ce; margin-bottom: 12px; border-bottom: 1px solid #ebf8ff; padding-bottom: 8px; }
 
-        /* قائمة الأرشفة */
-        .archive-toggle-btn { width: 100%; padding: 15px; background: #0d1b3e; color: white; border: none; border-radius: 15px; font-size: 16px; font-weight: 700; cursor: pointer; margin-top: 15px; display: flex; justify-content: space-between; align-items: center; }
+        /* زرار الطريقة الجديد (Style Minimalist) */
+        .archive-toggle-btn { 
+            width: 100%; 
+            padding: 14px; 
+            background: #f8fafc; 
+            color: #1e293b; 
+            border: 2px solid #e2e8f0; 
+            border-radius: 15px; 
+            font-size: 15px; 
+            font-weight: 700; 
+            cursor: pointer; 
+            margin-top: 15px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        .archive-toggle-btn:active { transform: scale(0.98); background: #edf2f7; }
+
         .archive-content { display: none; margin-top: 15px; }
-        .step-card { background: #f8fafc; border-radius: 20px; padding: 15px; margin-bottom: 20px; border: 1px solid #e2e8f0; text-align: center; }
-        .step-img { width: 100%; border-radius: 12px; margin-bottom: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .step-card { background: #ffffff; border-radius: 20px; padding: 15px; margin-bottom: 20px; border: 1px solid #f1f5f9; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.02); }
+        .step-img { width: 100%; border-radius: 12px; margin-bottom: 15px; border: 1px solid #f1f5f9; }
 
-        /* أزرار المشاهدة الأصلية (مربعات بجانب بعض) */
         .watch-section-box { background: white; border-radius: 25px; padding: 20px; width: 100%; margin: 25px 0; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid #f0f4f8; text-align: center; }
-        .watch-title { font-size: 18px; color: #0d1b3e; font-weight: 700; margin-bottom: 15px; display: block; }
+        .watch-title { font-size: 17px; color: #1e293b; font-weight: 700; margin-bottom: 15px; display: block; }
         .watch-buttons { display: flex; gap: 12px; width: 100%; }
-        .platform-btn { flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px; background: #fff; border-radius: 15px; text-decoration: none; color: #0d1b3e; font-weight: bold; border: 2px solid #e2e8f0; }
+        .platform-btn { flex: 1; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px; background: #fff; border-radius: 15px; text-decoration: none; color: #1e293b; font-weight: bold; border: 2px solid #e2e8f0; font-size: 14px; }
 
-        .footer-rights { text-align: center; padding: 30px 10px; width: 100%; font-weight: 600; opacity: 0.7; color: #0d1b3e; margin-top: 20px; }
+        .footer-rights { text-align: center; padding: 30px 10px; width: 100%; font-weight: 600; opacity: 0.7; color: #64748b; font-size: 13px; }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="top-nav">
-             <a href="recent-videos.html" class="back-circle" style="text-decoration:none; background:#e2e8f0; width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#0d1b3e;">
+             <a href="recent-videos.html" class="back-circle" style="text-decoration:none; background:#f1f5f9; width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#1e293b;">
                 <i class="fas fa-arrow-right"></i>
              </a>
              <span class="brand-name">Mohamed Salem | Tech</span>
         </div>
 
-        <div class="video-detail-card" style="width: 100%;">
-            <div class="v-img-container" style="height: 220px; border-radius: 20px; overflow: hidden;">
-                <img src="https://raw.githubusercontent.com/msalem-tech/mohamedsalem-tech/refs/heads/main/IMG_%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A5%D9%A0%D9%A7_%D9%A0%D9%A2%D9%A2%D9%A7%D9%A2%D9%A7.png" class="v-actual-img" style="width:100%; height:100%; object-fit:cover;">
+        <div class="video-detail-card">
+            <div class="v-img-container" style="height: 220px; border-radius: 24px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+                <img src="https://raw.githubusercontent.com/msalem-tech/mohamedsalem-tech/refs/heads/main/IMG_%D9%A2%D9%A0%D9%A2%D9%A6%D9%A0%D9%A5%D9%A0%D9%A7_%D9%A0%D9%A2%D9%A2%D9%A7%D9%A2%D9%A7.png" style="width:100%; height:100%; object-fit:cover;">
             </div>
             
             <div class="v-body-content" style="padding: 20px 0; text-align: right;">
-                <h3 style="color: #0d1b3e; font-size: 22px; margin-bottom: 10px;">أقوى بوتات تيليجرام 😳🔥</h3>
+                <h3 style="color: #1e293b; font-size: 21px; margin-bottom: 10px;">أقوى بوتات تيليجرام 😳🔥</h3>
                 
                 <div class="video-description">
                     بدل ما تستخدم برامج تحميل زي Snaptube وVidMate وغيرها من التطبيقات المجهولة 👀<br>
@@ -62,7 +77,7 @@
 
                 <div class="warning-section">
                     <span class="warning-header">تحذير هام جداً ⚠️</span>
-                    <div class="warning-text" style="font-size: 14px; color: #2d3748; line-height: 1.7;">
+                    <div style="font-size: 14px; color: #334155; line-height: 1.7;">
                         بص يا سيدي 👀<br><br>
                         عشان تستخدم البوتات دي بروقان ومن غير دوشة..<br>
                         لو البوت طلب منك تنضم في قناة عشان يشتغل معاك فده إجراء عادي جداً عند أغلب المطورين..<br><br>
@@ -84,7 +99,7 @@
                         <div class="step-card"><img src="https://i.postimg.cc/1RjYb0ct/IMG-20260515-025646.jpg" class="step-img"><span class="step-title">【 اضغط أرشفة 】</span><p class="step-desc">⬇ اضغط على زرار "أرشفة" عشان تنقل القناة للأرشيف</p></div>
                     </div>
 
-                    <div class="warning-text" style="margin-top:15px; font-size: 14px; color: #2d3748; line-height: 1.7;">
+                    <div style="margin-top:20px; font-size: 14px; color: #334155; line-height: 1.7;">
                         ودايماً خليك واعي إن أي رابط غريب يتبعت في القنوات دي مالناش دعوة بيه..<br>
                         إحنا داخلين ناخد مصلحتنا من البوت وبس..<br><br>
                         وأنا بقولك كده عشان تستخدم البوت وأنت مطمن وتتجنب أي محتوى غير جيد سواء <b>تقني</b> أو <b>ديني</b> ممكن ينشروه في القنوات دي..<br><br>
@@ -105,12 +120,8 @@
         </div>
 
         <div style="width: 100%; text-align: right; margin-bottom: 20px;">
-            <h4 style="margin-bottom: 15px; color: #0d1b3e;">الروابط الإضافية</h4>
+            <h4 style="margin-bottom: 15px; color: #1e293b;">الروابط الإضافية</h4>
             <div class="links-list">
-                <a href="https://t.me/VjBoT" target="_blank" class="extra-link-item">
-                    <div class="link-img-wrapper"><img src="https://i.postimg.cc/kGyTnM8K/IMG-20260507-003817-643.jpg" class="link-custom-img"></div>
-                    <span class="link-text">بوت VJ Plus</span><i class="fas fa-chevron-left"></i>
-                </a>
                 <a href="https://t.me/Allsavers_bot" target="_blank" class="extra-link-item">
                     <div class="link-img-wrapper"><img src="https://i.postimg.cc/W3XWMbW7/IMG-20260507-003824-654.jpg" class="link-custom-img"></div>
                     <span class="link-text">بوت ALL SAVERS</span><i class="fas fa-chevron-left"></i>
@@ -118,10 +129,6 @@
                 <a href="https://t.me/download_it_bot?start=ref6706979670" target="_blank" class="extra-link-item">
                     <div class="link-img-wrapper"><img src="https://raw.githubusercontent.com/msalem-tech/mohamedsalem-tech/refs/heads/main/IMG_20260507_003831_184.jpg" class="link-custom-img"></div>
                     <span class="link-text">بوت Download IT</span><i class="fas fa-chevron-left"></i>
-                </a>
-                <a href="https://t.me/CCDBot" target="_blank" class="extra-link-item">
-                    <div class="link-img-wrapper"><img src="https://i.postimg.cc/yx2wZ8W6/IMG-20260507-003800-395.jpg" class="link-custom-img"></div>
-                    <span class="link-text">بوت Media Downloader</span><i class="fas fa-chevron-left"></i>
                 </a>
             </div>
         </div>
