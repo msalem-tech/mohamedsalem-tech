@@ -34,22 +34,35 @@
 
         .watch-container-box { background: #f1f5f9; border: 1px solid #e2e8f0; border-radius: 25px; padding: 20px; margin: 25px 0; text-align: center; }
 
-        /* استرجاع تنسيق الروابط الأصلي */
-        .links-list { text-align: right; margin-bottom: 20px; }
+        /* التعديل الجديد للروابط الإضافية */
+        .links-section { text-align: right; margin-top: 30px; margin-bottom: 20px; }
+        
+        /* العنوان الكبير على الجنب */
+        .links-main-title { 
+            display: block;
+            font-size: 22px; 
+            font-weight: 800; 
+            color: #0d1b3e; 
+            margin-bottom: 20px;
+            padding-right: 5px;
+        }
+
         .extra-link-item {
             display: flex;
             align-items: center;
             justify-content: space-between;
             background: #ffffff;
-            padding: 12px;
-            border-radius: 15px;
+            padding: 15px;
+            border-radius: 20px; /* كيرف أوضح */
             text-decoration: none;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             border: 1px solid #f1f5f9;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
         }
-        .link-img-wrapper { width: 40px; height: 40px; border-radius: 10px; overflow: hidden; margin-left: 12px; }
+
+        .link-img-wrapper { width: 45px; height: 45px; border-radius: 12px; overflow: hidden; margin-left: 15px; }
         .link-custom-img { width: 100%; height: 100%; object-fit: cover; }
-        .link-text { color: #0d1b3e; font-weight: 700; flex-grow: 1; }
+        .link-text { color: #0d1b3e; font-weight: 700; flex-grow: 1; font-size: 16px; }
         .extra-link-item i { color: #cbd5e1; font-size: 14px; }
     </style>
 </head>
@@ -122,8 +135,8 @@
             </div>
         </div>
 
-        <div class="links-list">
-            <h4 style="color: #0d1b3e; margin-bottom: 15px;">الروابط الإضافية</h4>
+        <div class="links-section">
+            <span class="links-main-title">الروابط الإضافية</span>
             
             <a href="https://t.me/Allsavers_bot" target="_blank" class="extra-link-item">
                 <div class="link-img-wrapper"><img src="https://i.postimg.cc/W3XWMbW7/IMG-20260507-003824-654.jpg" class="link-custom-img"></div>
