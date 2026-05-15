@@ -7,13 +7,18 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* التنسيقات الإضافية للقائمة المنسدلة والطفطفة فقط */
-        @keyframes pulse-border {
-            0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4); }
-            70% { box-shadow: 0 0 0 10px rgba(59, 130, 246, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
+        /* إضافة تأثير الطفطفة الخارجي فقط بدون تحريك الكلام */
+        @keyframes outwardPulse {
+            0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
         }
 
+        .warning-pulsing {
+            animation: outwardPulse 2s infinite;
+        }
+
+        /* تنسيق القائمة المنسدلة */
         .archive-toggle-btn {
             width: 100%;
             padding: 15px;
@@ -49,10 +54,6 @@
             border-radius: 12px;
             margin-bottom: 10px;
         }
-
-        .warning-section-pulsing {
-            animation: pulse-border 2s infinite;
-        }
     </style>
 </head>
 <body>
@@ -72,7 +73,7 @@
             <div class="v-body-content">
                 <h3>أقوى بوتات تيليجرام 😳🔥</h3>
                 
-                <div class="video-description">
+                <div class="video-description" style="border-right: 4px solid #3b82f6; padding-right: 15px;">
                     بدل ما تستخدم برامج تحميل زي Snaptube وVidMate وغيرها من التطبيقات المجهولة 👀<br>
                     اللي ناس كتير بتعتبرها أفضل برامج تحميل… لكنها اتعرضت لاتهامات ومشاكل تتعلق بالخصوصية وتسريب بيانات المستخدمين، غير الإعلانات المزعجة واستهلاك البطارية بشكل كبير 😳<br><br>
                     وده غير إن أغلب البرامج دي بقت مليانة إعلانات غير مناسبة ومحتوى مزعج جدًا للأسف، ومعظم الناس بقت تستخدمها  ⚠️<br><br>
@@ -80,7 +81,7 @@
                     وده الجزء الأول... 😁
                 </div>
 
-                <div class="warning-section warning-section-pulsing" style="margin-top: 25px; background: #fff5f5; border: 1px solid #feb2b2; border-radius: 20px; padding: 20px; text-align: right;">
+                <div class="warning-section warning-pulsing" style="margin-top: 25px; background: #fff5f5; border: 1px solid #feb2b2; border-radius: 20px; padding: 20px; text-align: right;">
                     <span style="display: block; font-size: 18px; font-weight: 800; color: #c53030; margin-bottom: 12px;">تحذير هام جداً ⚠️</span>
                     <div style="font-size: 14px; color: #2d3748; line-height: 1.7;">
                         بص يا سيدي 👀<br><br>
@@ -97,20 +98,17 @@
                     </button>
 
                     <div class="archive-content" id="archive-box">
-                        <div class="step-card"><img src="https://i.postimg.cc/qR5q8Zf0/IMG-20260515-050511.jpg" class="step-img"><b>【 اضغط انضمام 】</b><p>⬇ اضغط على زرار "انضمام" الموجود في أسفل صفحة القناة</p></div>
-                        <div class="step-card"><img src="https://i.postimg.cc/gjgdPxsm/IMG-20260515-025429.jpg" class="step-img"><b>【 اضغط كتم الصوت 】</b><p>⬇ اضغط على زرار "كتم الصوت" الموجود أسفل القناة</p></div>
-                        <div class="step-card"><img src="https://i.postimg.cc/BnKWmYdk/IMG-20260515-030153.jpg" class="step-img"><b>【 اضغط مطولًا على القناة 】</b><p>⬇ اضغط ضغطة مطولة على اسم القناة لحد ما يتحدد عليها علامة صح ☑️</p></div>
-                        <div class="step-card"><img src="https://i.postimg.cc/pdJ6SgkY/IMG-20260515-025928.jpg" class="step-img"><b>【 اضغط على الثلاث نقاط 】</b><p>⬇ اضغط على زرار الثلاث نقاط (⋮) اللي فوق في الصفحة</p></div>
-                        <div class="step-card"><img src="https://i.postimg.cc/1RjYb0ct/IMG-20260515-025646.jpg" class="step-img"><b>【 اضغط أرشفة 】</b><p>⬇ اضغط على زرار "أرشفة" عشان تنقل القناة للأرشيف</p></div>
+                        <div class="step-card"><img src="https://i.postimg.cc/qR5q8Zf0/IMG-20260515-050511.jpg" class="step-img"><b>【 اضغط انضمام 】</b></div>
+                        <div class="step-card"><img src="https://i.postimg.cc/gjgdPxsm/IMG-20260515-025429.jpg" class="step-img"><b>【 اضغط كتم الصوت 】</b></div>
+                        <div class="step-card"><img src="https://i.postimg.cc/BnKWmYdk/IMG-20260515-030153.jpg" class="step-img"><b>【 اضغط مطولًا على القناة 】</b></div>
+                        <div class="step-card"><img src="https://i.postimg.cc/pdJ6SgkY/IMG-20260515-025928.jpg" class="step-img"><b>【 اضغط على الثلاث نقاط 】</b></div>
+                        <div class="step-card"><img src="https://i.postimg.cc/1RjYb0ct/IMG-20260515-025646.jpg" class="step-img"><b>【 اضغط أرشفة 】</b></div>
                     </div>
 
                     <div style="margin-top: 15px;">
                         ودايماً خليك واعي إن أي رابط غريب يتبعت في القنوات دي مالناش دعوة بيه..<br>
                         إحنا داخلين ناخد مصلحتنا من البوت وبس..<br><br>
-                        وأنا بقولك كده عشان تستخدم البوت وأنت مطمن وتتجنب أي محتوى غير جيد سواء <b>تقني</b> أو <b>ديني</b> ممكن ينشروه في القنوات دي..<br><br>
-                        وأنا بريء قدام ربنا وبخلي مسؤوليتي تماماً..<br>
-                        اللهم قد بلغت اللهم فاشهد 🤍<br><br>
-                        ولو واجهتك أي مشكلة في أي وقت فـ اتواصل معايا وأنا إن شاء الله هساعدك 🙏
+                        وأنا بريء قدام ربنا وبخلي مسؤوليتي تماماً.. اللهم قد بلغت 🤍
                     </div>
                 </div>
             </div>
